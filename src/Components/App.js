@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import firebase from '../firebase';
-import '../Partials/App.scss';
+import '../styles/App.scss';
 
 class App extends Component {
   constructor() {
