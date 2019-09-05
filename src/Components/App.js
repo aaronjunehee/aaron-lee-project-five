@@ -1,20 +1,34 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
+import Header from './Header';
+import Form from './Form';
 import firebase from '../firebase';
 import '../styles/App.scss';
 
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
       memorial: [],
-    }
+    };
   }
   
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
     dbRef.on('value', (response) => {
-      console.log(response.val());
+      const comment = response.val();
+      console.log(comment);
+      
+      const newState = [];
+      console.log(newState);
+
+      for (let key in comment){
+        newState.push(comment[key]);
+      }
+      this.setState({
+        memorial: newState,
+      })
     })
 
   }
@@ -22,12 +36,18 @@ class App extends Component {
   
   render() {
     return (
-      <ul className="App">
-        {this.state.memorial.map((comment) => {
-          return <li>{comment}</li>
-        })}
-        <li>Hello, World!</li>
-      </ul>
+      <div>
+        <Header />
+        <main>
+          <Form />
+          <ul className="App">
+            {this.state.memorial.map((comment) => {
+              return <li>{comment}</li>
+            })}
+            <li>Hello, World!</li>
+          </ul>
+        </main>
+      </div>
     );
   }
 }
