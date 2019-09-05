@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
-import './App.scss';
+import firebase from '../firebase';
+import '../Partials/App.scss';
 
 class App extends Component {
   constructor() {
@@ -26,6 +26,7 @@ class App extends Component {
         {this.state.memorial.map((comment) => {
           return <li>{comment}</li>
         })}
+        <li>Hello, World!</li>
       </ul>
     );
   }
