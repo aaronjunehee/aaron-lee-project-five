@@ -41,8 +41,8 @@ class App extends Component {
         <main>
           <Form />
           <ul className="App">
-            {this.state.memorial.map((comment) => {
-              return <li>{comment}</li>
+            {this.state.memorial.map((plantComment, index) => {
+              return <li key={index}>{plantComment}</li>
             })}
             <li>Hello, World!</li>
           </ul>
