@@ -10,7 +10,7 @@ class App extends Component {
     super();
 
     this.state = {
-      memorial: [],
+      userComments: [],
     };
   }
   
@@ -27,11 +27,11 @@ class App extends Component {
       for (let key in comments){
         newState.push({
           key: key, 
-          name: comments[key]
+          content: comments[key]
         });
       }
       this.setState({
-        memorial: newState,
+        userComments: newState,
       })
     })
 
@@ -40,22 +40,20 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Header />
         <main>
           <Form />
           <ul className="App">
-            {this.state.memorial.map(memorial => {
+            {this.state.userComments.map(userComments => {
               return ( 
-                // <li key={memorial.key}>{memorial.name.comment} {memorial.name.count}</li>
                 <UserComment 
-                  key={memorial.key}
-                  message={memorial.name.comment}
-                  numOfKills={memorial.name.count}
+                  key={userComments.key}
+                  message={userComments.content.comment}
+                  numOfKills={userComments.content.count}
                 />
               );
             })}
-            <li>Hello, World!</li>
           </ul>
         </main>
       </div>

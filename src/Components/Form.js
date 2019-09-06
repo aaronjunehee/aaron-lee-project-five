@@ -1,12 +1,13 @@
 import React, { Component } from 'react'; 
 import firebase from '../firebase';
+import GifFinder from './GifFinder';
 
 class Form extends Component {
     constructor(){
         super();
 
         this.state = {
-            userInput: '',
+            plantComment: '',
             killCount: '',
         };
     }
@@ -22,10 +23,10 @@ class Form extends Component {
         event.preventDefault();
         const dbRef = firebase.database().ref();
         dbRef.push({
-            comment: this.state.userInput,
+            comment: this.state.plantComment,
             count: this.state.killCount,
         });
-        this.setState({ userInput: "" })
+        this.setState({ plantComment: "" })
     }
     
     render() {
@@ -34,9 +35,9 @@ class Form extends Component {
                 <label>Confession:</label>
                 <input 
                     onChange={this.handleChange}
-                    name="userInput"
+                    name="plantComment"
                     type="text"
-                    value={this.state.userInput}
+                    value={this.state.plantComment}
                 />
                 <label>Kill Count:</label>
                 <input
@@ -47,9 +48,10 @@ class Form extends Component {
                     min="1"
                     max="100"
                 />
+                <GifFinder />
                 <button onClick={this.handleSubmit}>Submit</button>
             </form>
-        )
+        );
     }
 }
 
