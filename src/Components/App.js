@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
+import UserComment from './UserComment';
 import firebase from '../firebase';
 import '../styles/App.scss';
 
@@ -46,8 +47,13 @@ class App extends Component {
           <ul className="App">
             {this.state.memorial.map(memorial => {
               return ( 
-                <li key={memorial.key}>{memorial.name.comment} {memorial.name.count}</li>
-              )
+                // <li key={memorial.key}>{memorial.name.comment} {memorial.name.count}</li>
+                <UserComment 
+                  key={memorial.key}
+                  message={memorial.name.comment}
+                  numOfKills={memorial.name.count}
+                />
+              );
             })}
             <li>Hello, World!</li>
           </ul>
