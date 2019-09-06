@@ -17,14 +17,17 @@ class App extends Component {
     const dbRef = firebase.database().ref();
 
     dbRef.on('value', (response) => {
-      const comment = response.val();
-      console.log(comment);
+      const comments = response.val();
+      console.log(comments);
       
       const newState = [];
       console.log(newState);
 
-      for (let key in comment){
-        newState.push(comment[key]);
+      for (let key in comments){
+        newState.push({
+          key: key, 
+          name: comments[key]
+        });
       }
       this.setState({
         memorial: newState,
@@ -41,8 +44,10 @@ class App extends Component {
         <main>
           <Form />
           <ul className="App">
-            {this.state.memorial.map((plantComment, index) => {
-              return <li key={index}>{plantComment}</li>
+            {this.state.memorial.map(memorial => {
+              return ( 
+                <li key={memorial.key}>{memorial.name.comment} {memorial.name.count}</li>
+              )
             })}
             <li>Hello, World!</li>
           </ul>

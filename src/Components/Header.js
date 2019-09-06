@@ -6,7 +6,7 @@ class Header extends Component {
             <header>
                 <div className="wrapper">
                     <img/>
-                    <h1>True Confessions of Houseplant Killers</h1>
+                    <h1>Houseplant Killer Confessions</h1>
                 </div>
             </header>
         )

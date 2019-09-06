@@ -6,13 +6,14 @@ class Form extends Component {
         super();
 
         this.state = {
-            userInput: ''
+            userInput: '',
+            killCount: '',
         };
     }
     
     handleChange = (event) => {
         this.setState({
-            userInput: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
@@ -20,20 +21,31 @@ class Form extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const dbRef = firebase.database().ref();
-        console.log(this.state.userInput);
-        dbRef.push(this.state.userInput);
+        dbRef.push({
+            comment: this.state.userInput,
+            count: this.state.killCount,
+        });
         this.setState({ userInput: "" })
     }
     
     render() {
         return (
             <form>
-                <label>Confession</label>
+                <label>Confession:</label>
                 <input 
                     onChange={this.handleChange}
                     name="userInput"
                     type="text"
                     value={this.state.userInput}
+                />
+                <label>Kill Count:</label>
+                <input
+                    onChange={this.handleChange}
+                    name="killCount"
+                    type="number"
+                    value={this.state.killCount}
+                    min="1"
+                    max="100"
                 />
                 <button onClick={this.handleSubmit}>Submit</button>
             </form>
