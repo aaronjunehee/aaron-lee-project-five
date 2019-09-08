@@ -42,8 +42,11 @@ class GifFinder extends Component {
         this.props.gifParentCallback(gifUrl);
     }
 
-    
-
+    emptySearch = () => {
+        this.setState({
+            search: '',
+        })
+    }
 
     render() {
         return (

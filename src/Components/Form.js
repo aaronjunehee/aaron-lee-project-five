@@ -11,6 +11,8 @@ class Form extends Component {
             killCount: '',
             selectedGif: '',
         };
+
+        this.gifElement = React.createRef();
     }
 
     gifCallbackFunction = (gifUrl) => {
@@ -34,7 +36,9 @@ class Form extends Component {
             count: this.state.killCount,
             gif: this.state.selectedGif,
         });
-        this.setState({ plantComment: "" })
+        this.setState({ plantComment: "", killCount: "" });
+        
+        this.gifElement.current.emptySearch();
     }
     
     render() {
@@ -56,7 +60,7 @@ class Form extends Component {
                     min="1"
                     max="100"
                 />
-                <GifFinder gifParentCallback = {this.gifCallbackFunction} />
+                <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement}/>
                 <button onClick={this.handleSubmit}>Submit</button>
             </form>
         );

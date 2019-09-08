@@ -5,7 +5,7 @@ const UserComment = (prop) => {
         <li>
             <h2>{prop.message}</h2>
             <p>{prop.numOfKills}</p>
-            <div>Gif Goes Here</div>
+            <img src={prop.gif} />
         </li>
     )
 }

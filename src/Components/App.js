@@ -51,6 +51,7 @@ class App extends Component {
                   key={userComments.key}
                   message={userComments.content.comment}
                   numOfKills={userComments.content.count}
+                  gif={userComments.content.gif}
                 />
               );
             })}
