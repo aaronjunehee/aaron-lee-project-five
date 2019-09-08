@@ -9,7 +9,14 @@ class Form extends Component {
         this.state = {
             plantComment: '',
             killCount: '',
+            selectedGif: '',
         };
+    }
+
+    gifCallbackFunction = (gifUrl) => {
+        this.setState({
+            selectedGif: gifUrl
+        })
     }
     
     handleChange = (event) => {
@@ -25,6 +32,7 @@ class Form extends Component {
         dbRef.push({
             comment: this.state.plantComment,
             count: this.state.killCount,
+            gif: this.state.selectedGif,
         });
         this.setState({ plantComment: "" })
     }
@@ -48,7 +56,7 @@ class Form extends Component {
                     min="1"
                     max="100"
                 />
-                <GifFinder />
+                <GifFinder gifParentCallback = {this.gifCallbackFunction} />
                 <button onClick={this.handleSubmit}>Submit</button>
             </form>
         );
