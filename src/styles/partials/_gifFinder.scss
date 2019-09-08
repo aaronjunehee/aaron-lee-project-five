@@ -17,10 +17,37 @@
     top: 25%;
     bottom: 25%;
     margin: auto;
-    border-radius: 20px;
+    // border-radius: 20px;
     background: white;
+    overflow:scroll;
 }
 
 .close {
     margin: 10px;
+}
+
+.gifItem {
+    width: 33%;
+    
+}
+
+.gifNav {
+    position: fixed;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    right: 26.2%;
+    left: 25%;
+}
+
+.gifResults {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 1500px;
+    // width: 600px;
+ 
+
+    margin-top: 40px;
+    
 }

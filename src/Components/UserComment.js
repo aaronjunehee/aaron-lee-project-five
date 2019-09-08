@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserComment = (prop) => {
     return (
-        <li>
+        <li className="userComment">
             <h2>{prop.message}</h2>
             <p>{prop.numOfKills}</p>
             <img src={prop.gif} />

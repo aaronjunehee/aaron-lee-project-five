@@ -18,10 +18,10 @@ class Form extends Component {
         this.gifElement = React.createRef();
     }
 
-    handleAddGifInput = (event) => {
+    toggleGifModal = (event) => {
         event.preventDefault();
         this.setState({
-            inputLinkClicked: true
+            inputLinkClicked: !this.state.inputLinkClicked
         })
     }
 
@@ -48,7 +48,7 @@ class Form extends Component {
         });
         this.setState({ plantComment: "", killCount: 0 });
         
-        this.gifElement.current.emptySearch();
+        // this.gifElement.current.emptySearch();
     }
 
     incrementCount = (event) => {
@@ -80,17 +80,16 @@ class Form extends Component {
                
 
                 <div className="flexContainer bottom">
-                    <button onClick={this.handleAddGifInput} className='gifIcon'>
+                    <button onClick={this.toggleGifModal} className='gifIcon'>
                         <img src={gifIcon} />
                     </button>
                     {
-                        this.state.inputLinkClicked? 
+                        this.state.inputLinkClicked && 
 
-                        <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement} />
+                        <GifFinder 
+                        toggle={this.toggleGifModal}
+                        gifParentCallback={this.gifCallbackFunction} ref={this.gifElement} />
 
-                        :
-
-                        <div></div>
                     }
                     
                     

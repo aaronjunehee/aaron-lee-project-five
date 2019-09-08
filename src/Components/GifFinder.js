@@ -3,8 +3,8 @@ import axios from 'axios';
 
     
 class GifFinder extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             gifs: [],
             search: '',
@@ -55,22 +55,27 @@ class GifFinder extends Component {
     render() {
         return (
             <div className="popUp">
+                {console.log(this.props)}
                 <div className="gifContainer">
-                    <i class="fas fa-times close"></i>
-                    <input
-                        onChange={this.handleChange}
-                        name="searchGifs"
-                        value={this.state.search} 
-                        type="text" 
-                    />
-                    <button onClick={this.handleSubmit}>Find Gif's!</button>
-                    {this.state.search ? (this.state.gifs.map(gifItem => {
-                        return (
-                            <div key={gifItem.id} onClick={() => this.handleClick(gifItem.images.original.url)}>
-                                <img src={gifItem.images.fixed_width.url} />
-                            </div>
-                        )
-                    })) : (<p>Nothing</p>)}
+                    <div className="gifNav">
+                        <i class="fas fa-times close" onClick={this.props.toggle}></i>
+                        <input
+                            onChange={this.handleChange}
+                            name="searchGifs"
+                            value={this.state.search} 
+                            type="text" 
+                        />
+                        <button onClick={this.handleSubmit}>Find Gif's!</button>
+                    </div>
+                    <div className="gifResults clearfix">
+                        {this.state.search ? (this.state.gifs.map(gifItem => {
+                            return (
+                                <div className='gifItem' key={gifItem.id} onClick={() => this.handleClick(gifItem.images.original.url)}>
+                                    <img src={gifItem.images.fixed_height.url} />
+                                </div>
+                            )
+                        })) : (<p></p>)}
+                    </div>
                 </div>
                 
             </div>
