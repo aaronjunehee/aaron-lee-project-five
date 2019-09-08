@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    font-family: $primaryFont;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}

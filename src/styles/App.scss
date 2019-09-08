@@ -1,5 +1,10 @@
+@import './partials/setup';
+@import './partials/variablesMixins';
+@import '/partials/global';
 @import './partials/header';
+@import './partials/form';
 @import './partials/wrapper';
+@import './partials/buttons';
 
 .App {
   text-align: center;

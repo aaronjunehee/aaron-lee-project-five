@@ -1,3 +1,16 @@
-li {
-    color: red;
+header {
+    // border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0 50px;
+    h1 {
+        font-size: 3.4rem;
+        font-weight: 700;
+        color: $black;
+        // margin: 17px 0 3px;
+    }
+    .skull {
+        flex: 0 0 50px;
+    }
 }

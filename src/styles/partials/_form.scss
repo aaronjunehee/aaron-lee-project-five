@@ -1,0 +1,17 @@
+form {
+    border: 2px solid $grey;
+    font-family: $primaryFont;
+    .flexContainer {
+        display: flex;
+        margin: 7px 0;
+    }
+    .confessionInput {
+        flex: 1 1 100%;
+        border: none;
+        padding-left: 15px;
+    }
+    .userIcon {
+        flex: 0 0 65px;
+        padding: 5px;
+    }
+}
