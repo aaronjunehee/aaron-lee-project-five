@@ -34,12 +34,16 @@ class GifFinder extends Component {
             search: event.target.value
         })
         console.log(this.state.search);
-        this.getGifs(this.state.search);
     }
 
     handleClick = (gifUrl) => {
         console.log(gifUrl);
         this.props.gifParentCallback(gifUrl);
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.getGifs(this.state.search);
     }
 
     emptySearch = () => {
@@ -50,21 +54,24 @@ class GifFinder extends Component {
 
     render() {
         return (
-            <div>
-                <input
-                    onChange={this.handleChange}
-                    name="searchGifs"
-                    value={this.state.search} 
-                    type="text" 
-                />
-                {/* <button onClick={this.handleClick}>Find Gif's!</button> */}
-                {this.state.search ? (this.state.gifs.map(gifItem => {
-                    return (
-                        <div key={gifItem.id} onClick={() => this.handleClick(gifItem.images.original.url)}>
-                            <img src={gifItem.images.fixed_width.url} />
-                        </div>
-                    )
-                })) : (<p>Nothing</p>)}
+            <div className="popUp">
+                <div className="gifContainer">
+                    <i class="fas fa-times close"></i>
+                    <input
+                        onChange={this.handleChange}
+                        name="searchGifs"
+                        value={this.state.search} 
+                        type="text" 
+                    />
+                    <button onClick={this.handleSubmit}>Find Gif's!</button>
+                    {this.state.search ? (this.state.gifs.map(gifItem => {
+                        return (
+                            <div key={gifItem.id} onClick={() => this.handleClick(gifItem.images.original.url)}>
+                                <img src={gifItem.images.fixed_width.url} />
+                            </div>
+                        )
+                    })) : (<p>Nothing</p>)}
+                </div>
                 
             </div>
         );

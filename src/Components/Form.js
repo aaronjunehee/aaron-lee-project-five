@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from '../firebase';
 import GifFinder from './GifFinder';
 import leaf from '../images/leaf.svg';
+import gifIcon from '../images/gifIcon.svg'
 
 class Form extends Component {
     constructor(){
@@ -11,9 +12,17 @@ class Form extends Component {
             plantComment: '',
             killCount: 0,
             selectedGif: '',
+            inputLinkClicked: false
         };
 
         this.gifElement = React.createRef();
+    }
+
+    handleAddGifInput = (event) => {
+        event.preventDefault();
+        this.setState({
+            inputLinkClicked: true
+        })
     }
 
     gifCallbackFunction = (gifUrl) => {
@@ -68,21 +77,30 @@ class Form extends Component {
                         className="confessionInput"
                     ></textarea>
                 </div>
-                {/* <label class="visuallyHidden">Kill Count:</label>
-                <input
-                    onChange={this.handleChange}
-                    name="killCount"
-                    type="number"
-                    value={this.state.killCount}
-                    min="1"
-                    max="100"
-                /> */}
+               
 
                 <div className="flexContainer bottom">
-                    <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement}/>
-                    <p className="killCount">🥀x{this.state.killCount}</p>
-                    <button onClick={this.incrementCount} className="increment">Number of Kills</button>
-                    <button onClick={this.handleSubmit} className="submit">Submit</button>
+                    <button onClick={this.handleAddGifInput} className='gifIcon'>
+                        <img src={gifIcon} />
+                    </button>
+                    {
+                        this.state.inputLinkClicked? 
+
+                        <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement} />
+
+                        :
+
+                        <div></div>
+                    }
+                    
+                    
+                    
+
+                    <div className="bottomRight">
+                        <p className="killCount">🥀x{this.state.killCount}</p>
+                        <button onClick={this.incrementCount} className="increment">Number of Kills</button>
+                        <button onClick={this.handleSubmit} className="submit">Submit</button>
+                    </div>
                 </div>
             </form>
         );
