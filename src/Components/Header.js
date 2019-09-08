@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import leaf from '../images/leaf.svg'
+import down_chevron from '../images/down_chevron.svg'
 
 
 class Header extends Component {
     render(){
         return (
             <header>
-                <h1>Houseplant Killer Confessions</h1>    
-                <div class="skull">
-                    <img src={leaf}/>
+                <div class="intro">
+                    <h2>A Safe Space</h2>
+                    <h3>for indoor plant serial killers.</h3>
                 </div>
+                <div class='chevron'>
+                    <img src={down_chevron}/>
+                </div>
+               
             </header>
         )
     }

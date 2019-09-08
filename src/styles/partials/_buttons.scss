@@ -2,10 +2,15 @@ button {
     border-radius: 4px;
     border: 1px solid transparent;
     font-family: $primaryFont;
+    padding: 3px 15px;
 }
 
 button.submit {
     background: $green;
     color: white;
-    padding: 3px 15px;
+    margin: 0 5px;
+}
+
+button.increment {
+    margin-left: 5px;
 }

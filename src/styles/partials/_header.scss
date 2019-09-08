@@ -1,16 +1,52 @@
-header {
+Header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        font-size: 6rem;
+        line-height: 8.5rem;
+        word-spacing: -6px;
+    }
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .intro {
+        flex: 1 1 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .chevron {
+        flex: 1 1 45%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            width: 50px;
+            margin-bottom: 30px;
+        }
+        
+    }
+}
+
+
+Nav {
     // border: 1px solid grey;
     display: flex;
-    justify-content: space-between;
+    position: fixed;
+    // justify-content: space-between;
     align-items: center;
-    margin: 90px 0 50px;
+    margin: 25px 0;
     h1 {
-        font-size: 3.4rem;
-        font-weight: 700;
+        font-size: 2rem;
+        font-weight: 500;
         color: $black;
-        // margin: 17px 0 3px;
+        line-height: 1.8rem;
     }
     .skull {
-        flex: 0 0 50px;
+        margin: 0 20px 0 20px;
+        flex: 0 0 40px;
     }
 }

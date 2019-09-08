@@ -5,13 +5,21 @@ form {
         display: flex;
         margin: 7px 0;
     }
+    .bottom {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
     .confessionInput {
         flex: 1 1 100%;
         border: none;
-        padding-left: 15px;
+        padding: 15px;
+        resize: none;
     }
     .userIcon {
         flex: 0 0 65px;
         padding: 5px;
+    }
+    .killCount {
+        font-size: 2.5rem;
     }
 }

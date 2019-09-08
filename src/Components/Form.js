@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import firebase from '../firebase';
 import GifFinder from './GifFinder';
-import virus from '../images/virus.svg';
+import leaf from '../images/leaf.svg';
 
 class Form extends Component {
     constructor(){
@@ -9,7 +9,7 @@ class Form extends Component {
 
         this.state = {
             plantComment: '',
-            killCount: '',
+            killCount: 0,
             selectedGif: '',
         };
 
@@ -37,27 +37,36 @@ class Form extends Component {
             count: this.state.killCount,
             gif: this.state.selectedGif,
         });
-        this.setState({ plantComment: "", killCount: "" });
+        this.setState({ plantComment: "", killCount: 0 });
         
         this.gifElement.current.emptySearch();
+    }
+
+    incrementCount = (event) => {
+        event.preventDefault();
+        this.setState({
+            killCount: this.state.killCount + 1,
+        })
     }
     
     render() {
         return (
             <form>
-                <div class="flexContainer">
+                <div className="flexContainer top">
                     <label className="visuallyHidden">Confession:</label>
                     <div className="userIcon">
-                        <img src={virus} />
+                        <img src={leaf} />
                     </div>
-                    <input 
+                    <textarea 
+                        rows='3'
+                        cols='10'
                         onChange={this.handleChange}
                         name="plantComment"
                         type="text"
                         value={this.state.plantComment}
                         placeholder="write a confession"
                         className="confessionInput"
-                    />
+                    ></textarea>
                 </div>
                 {/* <label class="visuallyHidden">Kill Count:</label>
                 <input
@@ -68,8 +77,13 @@ class Form extends Component {
                     min="1"
                     max="100"
                 /> */}
-                <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement}/>
-                <button onClick={this.handleSubmit} className="submit">Submit</button>
+
+                <div className="flexContainer bottom">
+                    <GifFinder gifParentCallback={this.gifCallbackFunction} ref={this.gifElement}/>
+                    <p className="killCount">🥀x{this.state.killCount}</p>
+                    <button onClick={this.incrementCount} className="increment">Number of Kills</button>
+                    <button onClick={this.handleSubmit} className="submit">Submit</button>
+                </div>
             </form>
         );
     }

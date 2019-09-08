@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from './Nav';
 import Header from './Header';
 import Form from './Form';
 import UserComment from './UserComment';
@@ -40,23 +41,26 @@ class App extends Component {
   
   render() {
     return (
-      <div className="wrapper">
-        <Header />
-        <main>
-          <Form />
-          <ul className="App">
-            {this.state.userComments.map(userComments => {
-              return ( 
-                <UserComment 
-                  key={userComments.key}
-                  message={userComments.content.comment}
-                  numOfKills={userComments.content.count}
-                  gif={userComments.content.gif}
-                />
-              );
-            })}
-          </ul>
-        </main>
+      <div>
+        <Nav />
+        <div className="wrapper">
+          <Header />
+          <main>
+            <Form />
+            <ul className="App">
+              {this.state.userComments.map(userComments => {
+                return ( 
+                  <UserComment 
+                    key={userComments.key}
+                    message={userComments.content.comment}
+                    numOfKills={userComments.content.count}
+                    gif={userComments.content.gif}
+                  />
+                );
+              })}
+            </ul>
+          </main>
+        </div>
       </div>
     );
   }
