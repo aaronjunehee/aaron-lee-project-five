@@ -1,8 +1,21 @@
 .userComment {
-    width: 33%;
+    // width: 30%;
+    border: 1px solid black;
+    // float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    background: $grey;
+
+    
+    .userCommentGif {
+        width: 100%;
+        padding: 2.5%;
+        
+    }
 }
 
-.App {
-    
-    // flex-direction: row-reverse;
+.userCommentContainer {
+    column-width: 200px;
+    column-gap: 5px;
+    padding: 5px
 }

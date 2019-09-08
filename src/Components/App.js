@@ -47,7 +47,7 @@ class App extends Component {
           <Header />
           <main>
             <Form />
-            <ul className="App">
+            <ul className="userCommentContainer">
               {this.state.userComments.map(userComments => {
                 return ( 
                   <UserComment 

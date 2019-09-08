@@ -27,7 +27,9 @@
 }
 
 .gifItem {
-    width: 33%;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 2px;
     
 }
 
@@ -41,11 +43,9 @@
 }
 
 .gifResults {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 1500px;
-    // width: 600px;
+    column-width: 200px;
+    column-gap: 5px;
+    padding: 10px;
  
 
     margin-top: 40px;
