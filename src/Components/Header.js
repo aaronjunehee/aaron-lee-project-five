@@ -8,7 +8,7 @@ class Header extends Component {
             <header>
                 <div class="intro">
                     <h2>A Safe Space</h2>
-                    <h3>for indoor plant serial killers.</h3>
+                    <h3>for <span class="highlight">indoor plant serial killers.</span></h3>
                 </div>
                 <div class='chevron'>
                     <img src={down_chevron}/>
