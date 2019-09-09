@@ -6,8 +6,8 @@ const UserComment = (prop) => {
             <div className="userCommentGif">
                 <img src={prop.gif} />
             </div>
-            <h2>{prop.message}</h2>
-            <p>{prop.numOfKills}</p>
+            <h4>{prop.message}</h4>
+            <p class="deathCount">🥀x{prop.numOfKills}</p>
         </li>
     )
 }

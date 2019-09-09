@@ -70,7 +70,7 @@ class GifFinder extends Component {
                     <div className="gifResults clearfix">
                         {this.state.search ? (this.state.gifs.map(gifItem => {
                             return (
-                                <div className='gifItem' key={gifItem.id} onClick={() => this.handleClick(gifItem.images.original.url)}>
+                                <div className='gifItem' key={gifItem.id} onClick={() => this.handleClick(gifItem.images.fixed_width.url)}>
                                     <img src={gifItem.images.fixed_height.url} />
                                 </div>
                             )

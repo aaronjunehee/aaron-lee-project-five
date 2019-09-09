@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import firebase from '../firebase';
 import GifFinder from './GifFinder';
 import leaf from '../images/leaf.svg';
-import gifIcon from '../images/gifIcon.svg'
+import gifIcon from '../images/gifIcon.svg';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 class Form extends Component {
     constructor(){
@@ -47,6 +49,7 @@ class Form extends Component {
             gif: this.state.selectedGif,
         });
         this.setState({ plantComment: "", killCount: 0 });
+        this.moveToSection();
         
         // this.gifElement.current.emptySearch();
     }
@@ -58,8 +61,9 @@ class Form extends Component {
         })
     }
 
-    moveToSection = (event) => {
-        event.preventDefault();
+    moveToSection = () => {
+        scroller.scrollTo('test');
+        console.log("hello");
         
     }
     
@@ -104,7 +108,7 @@ class Form extends Component {
                         <p className="killCount">🥀x{this.state.killCount}</p>
                         <button onClick={this.incrementCount} className="increment">Number of Kills</button>
 
-                        <button onClick={()=>{this.handleSubmit; this.moveToSection}}  className="submit">Submit</button>
+                        <button onClick={this.handleSubmit}  className="submit">Submit</button>
 
                     </div>
                 </div>
