@@ -33,12 +33,20 @@
 }
 
 .gifNav {
+    padding: 5px;
     position: fixed;
     background: white;
     display: flex;
     justify-content: space-between;
     right: 26.2%;
     left: 25%;
+    input{
+        flex: 1 1 40%;
+    }
+    button {
+        background: $green;
+        color: white;
+    }
 }
 
 .gifResults {

@@ -36,6 +36,7 @@ class GifFinder extends Component {
         console.log(this.state.search);
     }
 
+
     handleClick = (gifUrl) => {
         console.log(gifUrl);
         this.props.gifParentCallback(gifUrl);
