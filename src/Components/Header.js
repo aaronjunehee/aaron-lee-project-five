@@ -11,7 +11,7 @@ class Header extends Component {
                     <h3>for <span class="highlight">indoor plant serial killers.</span></h3>
                 </div>
                 <div class='chevron'>
-                    <img src={down_chevron}/>
+                    <a href="#main"><img src={down_chevron} /></a>
                 </div>
                
             </header>

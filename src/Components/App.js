@@ -45,20 +45,24 @@ class App extends Component {
         <Nav />
         <div className="wrapper">
           <Header />
-          <main>
-            <Form />
-            <ul className="userCommentContainer">
-              {this.state.userComments.map(userComments => {
-                return ( 
-                  <UserComment 
-                    key={userComments.key}
-                    message={userComments.content.comment}
-                    numOfKills={userComments.content.count}
-                    gif={userComments.content.gif}
-                  />
-                );
-              })}
-            </ul>
+          <main id="main">
+            <section className="formSection">
+              <Form />
+            </section>
+            <section id="userComments">
+              <ul className="userCommentContainer">
+                {this.state.userComments.map(userComments => {
+                  return ( 
+                    <UserComment 
+                      key={userComments.key}
+                      message={userComments.content.comment}
+                      numOfKills={userComments.content.count}
+                      gif={userComments.content.gif}
+                    />
+                  );
+                })}
+              </ul>
+            </section>
           </main>
         </div>
       </div>
