@@ -57,6 +57,11 @@ class Form extends Component {
             killCount: this.state.killCount + 1,
         })
     }
+
+    moveToSection = (event) => {
+        event.preventDefault();
+        
+    }
     
     render() {
         return (
@@ -98,7 +103,9 @@ class Form extends Component {
                     <div className="bottomRight">
                         <p className="killCount">🥀x{this.state.killCount}</p>
                         <button onClick={this.incrementCount} className="increment">Number of Kills</button>
-                        <button onClick={this.handleSubmit} className="submit">Submit</button>
+
+                        <button onClick={()=>{this.handleSubmit; this.moveToSection}}  className="submit">Submit</button>
+
                     </div>
                 </div>
             </form>

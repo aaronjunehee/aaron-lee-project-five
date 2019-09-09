@@ -49,7 +49,7 @@ class App extends Component {
             <section className="formSection">
               <Form />
             </section>
-            <section id="userComments">
+            <section id="userComments" class="userComments">
               <ul className="userCommentContainer">
                 {this.state.userComments.map(userComments => {
                   return ( 
