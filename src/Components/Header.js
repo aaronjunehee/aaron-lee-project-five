@@ -14,14 +14,16 @@ class Header extends Component {
     render(){
         return (
             <header>
-                <div class="intro">
+                <div className="intro">
                     <h2>A Safe Space</h2>
-                    <h3>for <span class="highlight">indoor plant serial killers.</span></h3>
+                    <h3>for <span className="highlight">indoor plant serial killers.</span></h3>
                 </div>
-                <div 
-                    className='chevron'
-                    onClick={this.moveToSection}>
-                    <img src={down_chevron} />
+                <div className='chevron'>
+                        <button
+                        className='mainButton'
+                        onClick={this.moveToSection}>
+                        <img src={down_chevron} />
+                        </button>
                 </div>
                
             </header>

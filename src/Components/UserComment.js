@@ -7,7 +7,7 @@ const UserComment = (prop) => {
                 <img src={prop.gif} />
             </div>
             <h4>{prop.message}</h4>
-            <p class="deathCount">🥀x{prop.numOfKills}</p>
+            <p className="deathCount">🥀x{prop.numOfKills}</p>
         </li>
     )
 }

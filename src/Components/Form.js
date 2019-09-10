@@ -42,15 +42,20 @@ class Form extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const dbRef = firebase.database().ref();
-        dbRef.push({
-            comment: this.state.plantComment,
-            count: this.state.killCount,
-            gif: this.state.selectedGif,
-        });
-        this.setState({ plantComment: "", killCount: 0 });
-        this.moveToSection();
-        this.setState({selectedGif:''});
+        if (this.state.plantComment === "" || this.state.killCount === 0 || this.state.selectedGif === "") {
+            alert("Fill out the form you murderer!")
+        } else {
+            const dbRef = firebase.database().ref();
+            dbRef.push({
+                comment: this.state.plantComment,
+                count: this.state.killCount,
+                gif: this.state.selectedGif,
+            });
+            this.setState({ plantComment: "", killCount: 0 });
+            this.moveToSection();
+            this.setState({ selectedGif: '' });
+        }
+        
         
         // this.gifElement.current.emptySearch();
     }
@@ -87,7 +92,7 @@ class Form extends Component {
                         className="confessionInput"
                     ></textarea>
                 </div>
-                <div class="gifPreview">
+                <div className="gifPreview">
                     <img src={selectedGif}/>
                 </div>
 

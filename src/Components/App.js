@@ -20,10 +20,8 @@ class App extends Component {
 
     dbRef.on('value', (response) => {
       const comments = response.val();
-      console.log(comments);
       
       const newState = [];
-      console.log(newState);
 
       for (let key in comments){
         newState.push({
@@ -49,7 +47,7 @@ class App extends Component {
             <section className="formSection">
               <Form />
             </section>
-            <section name="test" class="userComments">
+            <section name="test" className="userComments">
               <ul className="userCommentContainer">
                 {this.state.userComments.map(userComments => {
                   return ( 

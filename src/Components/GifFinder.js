@@ -71,10 +71,10 @@ class GifFinder extends Component {
         // const selectionVis = activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide';
         return (
             <div className="popUp">
-                {console.log(this.props)}
+
                 <div className="gifContainer">
                     <div className="gifNav">
-                        <i class="fas fa-times close" onClick={this.props.toggle}></i>
+                        <i className="fas fa-times close" onClick={this.props.toggle}></i>
                         <input
                             onChange={this.handleChange}
                             name="searchGifs"

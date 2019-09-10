@@ -36,7 +36,7 @@
 }
 
 .gifNav {
-    padding: 5px;
+    padding: 10px;
     position: fixed;
     background: white;
     display: flex;
@@ -45,10 +45,13 @@
     left: 25%;
     input{
         flex: 1 1 40%;
+        border-radius: 10px;
+        margin: 0 10px;
     }
     button {
         background: $green;
         color: white;
+        border-radius: 10px;
     }
 }
 
