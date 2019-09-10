@@ -45,7 +45,7 @@ class App extends Component {
         <Nav />
         <div className="wrapper">
           <Header />
-          <main id="main">
+          <main name="main">
             <section className="formSection">
               <Form />
             </section>

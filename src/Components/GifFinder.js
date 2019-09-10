@@ -8,8 +8,18 @@ class GifFinder extends Component {
         this.state = {
             gifs: [],
             search: '',
+            // selectedGif: false,
+            activeItemUrl: null
         };
+        
     }
+
+    // toggleGif = () => {
+    //     this.setState({
+    //         selectedGif: !this.state.selectedGif
+    //     })
+        
+    // }
 
     getGifs = (search) => {
         axios({
@@ -38,8 +48,11 @@ class GifFinder extends Component {
 
 
     handleClick = (gifUrl) => {
-        console.log(gifUrl);
         this.props.gifParentCallback(gifUrl);
+        // this.toggleGif(gifUrl);
+        this.setState({
+            activeItemUrl: gifUrl
+        })
     }
 
     handleSubmit = (event) => {
@@ -54,6 +67,8 @@ class GifFinder extends Component {
     }
 
     render() {
+        const { activeItemUrl } = this.state;
+        // const selectionVis = activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide';
         return (
             <div className="popUp">
                 {console.log(this.props)}
@@ -68,10 +83,13 @@ class GifFinder extends Component {
                         />
                         <button onClick={this.handleSubmit}>Find Gif's!</button>
                     </div>
-                    <div className="gifResults clearfix">
+                    <div className="gifResults">
                         {this.state.search ? (this.state.gifs.map(gifItem => {
                             return (
-                                <div className='gifItem' key={gifItem.id} onClick={() => this.handleClick(gifItem.images.fixed_width.url)}>
+                                <div 
+                                    className={activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide'}
+                                key={gifItem.id}
+                                onClick={() => this.handleClick(gifItem.images.fixed_width.url)}>
                                     <img src={gifItem.images.fixed_height.url} />
                                 </div>
                             )

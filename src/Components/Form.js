@@ -50,6 +50,7 @@ class Form extends Component {
         });
         this.setState({ plantComment: "", killCount: 0 });
         this.moveToSection();
+        this.setState({selectedGif:''});
         
         // this.gifElement.current.emptySearch();
     }
@@ -63,11 +64,11 @@ class Form extends Component {
 
     moveToSection = () => {
         scroller.scrollTo('test');
-        console.log("hello");
         
     }
     
     render() {
+        const { selectedGif } = this.state
         return (
             <form>
                 <div className="flexContainer top">
@@ -76,7 +77,7 @@ class Form extends Component {
                         <img src={leaf} />
                     </div>
                     <textarea 
-                        rows='3'
+                        rows='2'
                         cols='10'
                         onChange={this.handleChange}
                         name="plantComment"
@@ -86,7 +87,9 @@ class Form extends Component {
                         className="confessionInput"
                     ></textarea>
                 </div>
-               
+                <div class="gifPreview">
+                    <img src={selectedGif}/>
+                </div>
 
                 <div className="flexContainer bottom">
                     <button onClick={this.toggleGifModal} className='gifIcon'>
@@ -97,7 +100,8 @@ class Form extends Component {
 
                         <GifFinder 
                         toggle={this.toggleGifModal}
-                        gifParentCallback={this.gifCallbackFunction} ref={this.gifElement} />
+                        gifParentCallback={this.gifCallbackFunction} 
+                        ref={this.gifElement} />
 
                     }
                     
