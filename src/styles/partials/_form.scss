@@ -29,8 +29,11 @@ form {
         width: 50%;
         padding: 0px 0px 20px 50px;
     }
-    textarea:focus {
-        border: dashed 2px rgb(203, 94, 206);
+    textarea {
+        margin-right: 10px;
+        &:focus {
+            background: rgba(165, 165, 165, 0.068);
+        }
     }
     .gifIcon {
         &:focus {
