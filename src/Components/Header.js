@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import down_chevron from '../images/down_chevron.svg'
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import plant1 from '../images/plant1.png';
+import plant2 from '../images/plant2.png';
+
+
 
 
 class Header extends Component {
@@ -25,7 +29,12 @@ class Header extends Component {
                         <img src={down_chevron} />
                         </button>
                 </div>
-               
+                <div className="plant1">
+                    <img src={plant1} alt=""/>
+                </div>
+                <div className="plant2">
+                    <img src={plant2} alt="" />
+                </div>
             </header>
         )
     }

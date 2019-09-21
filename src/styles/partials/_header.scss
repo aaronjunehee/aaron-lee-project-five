@@ -4,12 +4,12 @@ Header {
     flex-direction: column;
     justify-content: center;
     h2 {
-        font-size: 6rem;
+        font-size: 7rem;
         line-height: 8.5rem;
         word-spacing: -6px;
     }
     h3 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 400;
 
     }
@@ -44,6 +44,27 @@ Header {
 			bottom: -15%;
 			background-color: rgba(66, 185, 19, 0.418);
 		
+    }
+    .plant1 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -10;
+        width: 35%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: none;
+            object-position: -250px -50px;
+        }
+    }
+    .plant2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -10;
+        width: 40%;
+        overflow: hidden;
     }
 }
 
