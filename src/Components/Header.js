@@ -13,27 +13,30 @@ class Header extends Component {
         scroller.scrollTo('main');
     }
 
-
-
     render(){
         return (
             <header>
-                <div className="intro">
-                    <h2>A Safe Space</h2>
-                    <h3>for <span className="highlight">indoor plant serial killers.</span></h3>
-                </div>
-                <div className='chevron'>
-                        <button
-                        className='mainButton'
-                        onClick={this.moveToSection}>
-                        <img src={down_chevron} />
-                        </button>
-                </div>
-                <div className="plant1">
-                    <img src={plant1} alt=""/>
-                </div>
-                <div className="plant2">
-                    <img src={plant2} alt="" />
+                <div className="wrapper">
+                    <div className="headerFlexContainer">
+                        <div className="intro">
+                            <h2>A safe space</h2>
+                            <h3>for indoor plant</h3>
+                            <h3>serial <span className="highlight"> killers.</span></h3>
+                        </div>
+                        <div className='chevron'>
+                                <button
+                                className='mainButton'
+                                onClick={this.moveToSection}>
+                                <img src={down_chevron} />
+                                </button>
+                        </div>
+                        {/* <div className="plant1">
+                            <img src={plant1} alt="A branch of plant with long leaves hanging from the left side of the site"/>
+                        </div> */}
+                        <div className="plant2">
+                            <img src={plant2} alt="A part of a plant hanging down from the top right corner of the window"/>
+                        </div>
+                    </div>
                 </div>
             </header>
         )

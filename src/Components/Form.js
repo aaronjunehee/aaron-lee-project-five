@@ -75,53 +75,55 @@ class Form extends Component {
     render() {
         const { selectedGif } = this.state
         return (
-            <form>
-                <div className="flexContainer top">
-                    <label className="visuallyHidden">Confession:</label>
-                    <div className="userIcon">
-                        <img src={leaf} />
-                    </div>
-                    <textarea 
-                        rows='2'
-                        cols='10'
-                        onChange={this.handleChange}
-                        name="plantComment"
-                        type="text"
-                        value={this.state.plantComment}
-                        placeholder="write a confession"
-                        className="confessionInput"
-                    ></textarea>
-                </div>
-                <div className="gifPreview">
-                    <img src={selectedGif}/>
-                </div>
-
-                <div className="flexContainer bottom">
-                    <button onClick={this.toggleGifModal} className='gifIcon'>
-                        <img src={gifIcon} />
-                    </button>
-                    {
-                        this.state.inputLinkClicked && 
-
-                        <GifFinder 
-                        toggle={this.toggleGifModal}
-                        gifParentCallback={this.gifCallbackFunction} 
-                        ref={this.gifElement} />
-
-                    }
-                    
-                    
-                    
-
-                    <div className="bottomRight">
-                        <p className="killCount">🥀x{this.state.killCount}</p>
-                        <button onClick={this.incrementCount} className="increment">Number of Kills</button>
-
-                        <button onClick={this.handleSubmit}  className="submit">Submit</button>
-
-                    </div>
-                </div>
-            </form>
+            <div className="wrapper">
+            	<form>
+            	    <div className="flexContainer top">
+            	        <label className="visuallyHidden">Confession:</label>
+            	        <div className="userIcon">
+            	            <img src={leaf} />
+            	        </div>
+            	        <textarea 
+            	            rows='2'
+            	            cols='10'
+            	            onChange={this.handleChange}
+            	            name="plantComment"
+            	            type="text"
+            	            value={this.state.plantComment}
+            	            placeholder="write a confession"
+            	            className="confessionInput"
+            	        ></textarea>
+            	    </div>
+            	    <div className="gifPreview">
+            	        <img src={selectedGif}/>
+            	    </div>
+            
+            	    <div className="flexContainer bottom">
+            	        <button onClick={this.toggleGifModal} className='gifIcon'>
+            	            <img src={gifIcon} />
+            	        </button>
+            	        {
+            	            this.state.inputLinkClicked && 
+            
+            	            <GifFinder 
+            	            toggle={this.toggleGifModal}
+            	            gifParentCallback={this.gifCallbackFunction} 
+            	            ref={this.gifElement} />
+            
+            	        }
+            	        
+            	        
+            	        
+            
+            	        <div className="bottomRight">
+            	            <p className="killCount">🥀x{this.state.killCount}</p>
+            	            <button onClick={this.incrementCount} className="increment">Number of Kills</button>
+            
+            	            <button onClick={this.handleSubmit}  className="submit">Submit</button>
+            
+            	        </div>
+            	    </div>
+            	</form>
+            </div>
         );
     }
 }
