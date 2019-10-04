@@ -21,7 +21,7 @@ class Header extends Component {
                         <div className="intro">
                             <h2>A safe space</h2>
                             <h3>for indoor plant</h3>
-                            <h3>serial <span className="highlight"> killers.</span></h3>
+                            <h3>serial <span className="highlight"> killers<span className="redDot">.</span></span></h3>
                         </div>
                         <div className='chevron'>
                                 <button

@@ -243,6 +243,8 @@ html {
 body {
   font-size: 2rem;
   font-family: "Roboto Mono", monospace;
+  background: url(../../images/white.jpg);
+  background-size: contain;
 }
 
 ul {
@@ -285,16 +287,16 @@ img {
 }
 
 .headerFlexContainer h2 {
-  font-size: 10.1rem;
-  line-height: 11.5rem;
+  font-size: 8.5rem;
+  line-height: 10rem;
   word-spacing: -10px;
   font-weight: 500;
 }
 
 .headerFlexContainer h3 {
-  font-size: 9.5rem;
+  font-size: 8.5rem;
   font-weight: 500;
-  line-height: 11rem;
+  line-height: 10rem;
   word-spacing: -10px;
 }
 
@@ -330,9 +332,14 @@ img {
           align-items: flex-end;
 }
 
+.headerFlexContainer .chevron button {
+  background: none;
+}
+
 .headerFlexContainer .chevron img {
-  width: 55px;
+  width: 60px;
   margin-bottom: 30px;
+  background: transparent;
 }
 
 .headerFlexContainer span.highlight {
@@ -342,11 +349,12 @@ img {
 .headerFlexContainer span.highlight::after {
   content: "";
   width: 104%;
-  height: 60%;
+  height: 50%;
   position: absolute;
   left: -2%;
-  bottom: -15%;
-  background-color: rgba(66, 185, 19, 0.267);
+  bottom: 0%;
+  background-color: rgba(131, 206, 124, 0.781);
+  background: #cdecd58c;
   z-index: -10;
 }
 
@@ -375,15 +383,20 @@ Nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 17.5px 0;
-  background: rgba(255, 255, 255, 0.815);
+  padding: 40px 0;
 }
 
 Nav h1 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.6rem;
+  font-weight: 700;
   color: #363636;
   line-height: 1.8rem;
+  padding: 25px 25px 25px 60px;
+  border: 2px solid rgba(0, 0, 0, 0.349);
+  font-family: "Playfair Display", serif;
+  letter-spacing: .5px;
+  position: relative;
+  z-index: 1000;
 }
 
 Nav .skull {
@@ -429,22 +442,19 @@ Nav .skull {
 }
 
 form {
-  border: 2px solid black;
   font-family: "Roboto Mono", monospace;
   position: relative;
-  background: white;
 }
 
 form::after {
   content: '';
-  background-color: transparent;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 20px;
   left: 20px;
-  border: 2px solid black;
-  z-index: -10;
+  border: 1px solid black;
+  z-index: -100;
 }
 
 form .flexContainer {
@@ -452,6 +462,14 @@ form .flexContainer {
   display: -ms-flexbox;
   display: flex;
   margin: 7px 0;
+}
+
+form .flexContainer.top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 form .bottom {
@@ -476,6 +494,9 @@ form .confessionInput {
   border: none;
   padding: 15px;
   resize: none;
+  background: rgba(255, 255, 255, 0.822);
+  border: solid 1px black;
+  text-align: center;
 }
 
 form .userIcon {
@@ -518,6 +539,7 @@ form .gifIcon:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: white;
 }
 
 .formSection form {
@@ -534,6 +556,12 @@ form .gifIcon:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.formSection form p.instruction {
+  font-family: "Playfair Display", serif;
+  padding-bottom: 30px;
+  font-size: 4rem;
 }
 
 button {
@@ -658,7 +686,7 @@ button.gifIcon {
   border: 1px solid rgba(114, 114, 114, 0.425);
   width: 100%;
   margin-bottom: 5px;
-  background: #b3b3b317;
+  background: white;
   padding: 2.5%;
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
@@ -669,15 +697,15 @@ button.gifIcon {
 }
 
 .userCommentContainer {
-  -webkit-column-width: 300px;
-          column-width: 300px;
+  -webkit-column-width: 250px;
+          column-width: 250px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
   padding: 5px;
 }
 
 .userComments {
-  padding-top: 60px;
+  padding-top: 140px;
 }
 
 h4 {

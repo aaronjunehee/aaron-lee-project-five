@@ -79,22 +79,23 @@ class Form extends Component {
             	<form>
             	    <div className="flexContainer top">
             	        <label className="visuallyHidden">Confession:</label>
-            	        <div className="userIcon">
+                        <p className="instruction">Write the dirt here.</p>
+            	        {/* <div className="userIcon">
             	            <img src={leaf} />
-            	        </div>
+            	        </div> */}
             	        <textarea 
-            	            rows='2'
-            	            cols='10'
+            	            rows='3'
+            	            cols='20'
             	            onChange={this.handleChange}
             	            name="plantComment"
             	            type="text"
             	            value={this.state.plantComment}
-            	            placeholder="write a confession"
+            	            placeholder="Enter message here"
             	            className="confessionInput"
             	        ></textarea>
-            	    </div>
-            	    <div className="gifPreview">
+            	    {/* <div className="gifPreview">
             	        <img src={selectedGif}/>
+            	    </div> */}
             	    </div>
             
             	    <div className="flexContainer bottom">

@@ -1,22 +1,27 @@
 form {
-    border: 2px solid black;
+    // border: 1px solid black;
     font-family: $primaryFont;
     position: relative;
-    background: white;
+    // background: rgba(255, 255, 255, 0.822);
+    // background: #cdecd5;
     &::after {
         content: '';
-        background-color: transparent;
+        // background: #e2c4dda2;
         position: absolute;
         width: 100%;
         height: 100%;
         top: 20px;
         left: 20px;
-        border: 2px solid black;
-        z-index: -10;
+        border: 1px solid black;
+        z-index: -100;
     }
     .flexContainer {
         display: flex;
         margin: 7px 0;
+    }
+    .flexContainer.top {
+        flex-direction: column;
+        text-align: center;
     }
     .bottom {
         justify-content: space-between;
@@ -30,6 +35,10 @@ form {
         border: none;
         padding: 15px;
         resize: none;
+        // background: #cdecd5;
+        background: rgba(255, 255, 255, 0.822);
+        border: solid 1px black;
+        text-align: center;
     }
     .userIcon {
         flex: 0 0 65px;
@@ -60,6 +69,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: white;
     form {
         width: 80%;
         height: 220px;
@@ -67,5 +77,10 @@ form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        p.instruction{
+            font-family: $secondaryFont;
+            padding-bottom: 30px;
+            font-size: 4rem;
+        }
     }
 }
