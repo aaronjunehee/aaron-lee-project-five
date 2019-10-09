@@ -4,17 +4,17 @@ form {
     position: relative;
     // background: rgba(255, 255, 255, 0.822);
     // background: #cdecd5;
-    &::after {
-        content: '';
-        // background: #e2c4dda2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 20px;
-        left: 20px;
-        border: 1px solid black;
-        z-index: -100;
-    }
+    // &::after {
+    //     content: '';
+    //     // background: #e2c4dda2;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 20px;
+    //     left: 20px;
+    //     border: 1px solid black;
+    //     z-index: -100;
+    // }
     .flexContainer {
         display: flex;
         margin: 7px 0;
@@ -69,7 +69,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: white;
+    // background: $offWhite;
     form {
         width: 80%;
         height: 220px;
@@ -79,6 +79,8 @@ form {
         justify-content: space-between;
         p.instruction{
             font-family: $secondaryFont;
+            font-weight: 700;
+            color: lighten($grey, 1%);            
             padding-bottom: 30px;
             font-size: 4rem;
         }

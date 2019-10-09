@@ -47,7 +47,7 @@ class App extends Component {
             <section className="formSection">
               <Form />
             </section>
-            <section name="test" className="userComments">
+          <section name="test" className="userComments">
               <div className="wrapper">
                 <ul className="userCommentContainer">
                   {this.state.userComments.map(userComments => {
