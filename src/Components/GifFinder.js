@@ -14,13 +14,6 @@ class GifFinder extends Component {
         
     }
 
-    // toggleGif = () => {
-    //     this.setState({
-    //         selectedGif: !this.state.selectedGif
-    //     })
-        
-    // }
-
     getGifs = (search) => {
         axios({
             method:'GET',

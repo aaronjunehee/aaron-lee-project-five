@@ -6,10 +6,11 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                {/* <div className="skull">
-                    <img src={virus} />
-                </div> */}
                 <h1>Houseplant-Killer <span className="">Confessions</span></h1>
+                <ol>
+                    <li>Share your botanical guilt</li>
+                    <li>Read comments</li>
+                </ol>
             </nav>
         )
     }

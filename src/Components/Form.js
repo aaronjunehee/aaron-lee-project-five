@@ -5,6 +5,7 @@ import leaf from '../images/leaf.svg';
 import gifIcon from '../images/gifIcon.svg';
 import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import plant1 from '../images/plant1.png';
 
 class Form extends Component {
     constructor(){
@@ -123,7 +124,9 @@ class Form extends Component {
             
             	        </div>
             	    </div>
+                    
             	</form>
+                
             </div>
         );
     }
