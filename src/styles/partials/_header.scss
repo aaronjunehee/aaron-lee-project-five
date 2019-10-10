@@ -23,20 +23,22 @@ header {
         }
         h3 {
             font-size: 2.5rem;
-            padding: 30px 0 45px;
+            padding: 33px 0 42px;
             // line-height: 5rem;
             // word-spacing: -10px;
             font-weight: 400;
             color: $grey;
             // color: $grey;
+            font-style: italic;
         }
         button {
             font-family: $primaryFont;
             font-weight: 900;
             color: white;
             font-size: 1.8rem;
-            background: #efa618;
-            padding: 15px 35px;
+            // background: $blue;
+            background: $green;
+            padding: 19px 35px;
             border-radius: 30px;
         }
     }

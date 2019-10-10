@@ -76,33 +76,30 @@ class Form extends Component {
     render() {
         const { selectedGif } = this.state
         return (
-            <div className="wrapper">
+            <div className="wrapper formContainer">
+                <h4 className="instruction">Write the dirt here.</h4>
+                <div className="gifPreviewContainer">
+                    <p>gif preview</p>
+                    <div className="gifPreview">
+                        <img src={selectedGif} />
+                    </div>
+                    
+                </div>
             	<form>
-            	    <div className="flexContainer top">
-            	        <label className="visuallyHidden">Confession:</label>
-                        <p className="instruction">Write the dirt here.</p>
-            	        {/* <div className="userIcon">
-            	            <img src={leaf} />
-            	        </div> */}
-            	        <textarea 
-            	            rows='3'
-            	            cols='20'
-            	            onChange={this.handleChange}
-            	            name="plantComment"
-            	            type="text"
-            	            value={this.state.plantComment}
-            	            placeholder="Enter message here"
-            	            className="confessionInput"
-            	        ></textarea>
-            	    {/* <div className="gifPreview">
-            	        <img src={selectedGif}/>
-            	    </div> */}
-            	    </div>
-            
-            	    <div className="flexContainer bottom">
-            	        <button onClick={this.toggleGifModal} className='gifIcon'>
-            	            <img src={gifIcon} />
-            	        </button>
+                    <label className="visuallyHidden">Write your message here</label>
+                    <input 
+                        // rows='3'
+                        // cols='20'
+                        onChange={this.handleChange}
+                        name="plantComment"
+                        type="text"
+                        value={this.state.plantComment}
+                        placeholder="Enter message here"
+                        className="confessionInput"
+                    />
+                    <button onClick={this.toggleGifModal} className='gifIcon'>
+                        {/* <img src={gifIcon} /> */}Find a Gif
+                    </button>
             	        {
             	            this.state.inputLinkClicked && 
             
@@ -111,19 +108,13 @@ class Form extends Component {
             	            gifParentCallback={this.gifCallbackFunction} 
             	            ref={this.gifElement} />
             
-            	        }
+            	        }        
+                    <button onClick={this.incrementCount} className="increment">Number of Kills <span className="killCount">x{this.state.killCount}</span></button>
             	        
-            	        
-            	        
-            
-            	        <div className="bottomRight">
-            	            <p className="killCount">🥀x{this.state.killCount}</p>
-            	            <button onClick={this.incrementCount} className="increment">Number of Kills</button>
-            
-            	            <button onClick={this.handleSubmit}  className="submit">Submit</button>
-            
-            	        </div>
-            	    </div>
+
+                        <div className="submitButtonContainer">
+                            <button onClick={this.handleSubmit} className="submit">Submit</button>
+                        </div>
                     
             	</form>
                 

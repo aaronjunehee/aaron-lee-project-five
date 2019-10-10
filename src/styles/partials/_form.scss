@@ -1,88 +1,181 @@
-form {
-    // border: 1px solid black;
-    font-family: $primaryFont;
-    position: relative;
-    // background: rgba(255, 255, 255, 0.822);
-    // background: #cdecd5;
-    // &::after {
-    //     content: '';
-    //     // background: #e2c4dda2;
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     top: 20px;
-    //     left: 20px;
-    //     border: 1px solid black;
-    //     z-index: -100;
-    // }
-    .flexContainer {
-        display: flex;
-        margin: 7px 0;
-    }
-    .flexContainer.top {
-        flex-direction: column;
-        text-align: center;
-    }
-    .bottom {
-        justify-content: space-between;
-        align-items: flex-end;
-        .bottomRight {
-            display: flex;
-        }
-    }
-    .confessionInput {
-        flex: 1 1 100%;
-        border: none;
-        padding: 15px;
-        resize: none;
-        // background: #cdecd5;
-        background: rgba(255, 255, 255, 0.822);
-        border: solid 1px black;
-        text-align: center;
-    }
-    .userIcon {
-        flex: 0 0 65px;
-        padding: 5px;
-    }
-    .killCount {
-        font-size: 2.3rem;
-    }
-    .gifPreview {
-        width: 50%;
-        padding: 0px 0px 20px 50px;
-    }
-    textarea {
-        margin-right: 10px;
-        &:focus {
-            background: rgba(165, 165, 165, 0.068);
-        }
-    }
-    .gifIcon {
-        &:focus {
-            border: dashed 2px rgb(203, 94, 206);
-        }
-    }
-}
+// form {
+//     // border: 1px solid black;
+//     font-family: $primaryFont;
+//     // position: relative;
+//     // background: rgba(255, 255, 255, 0.822);
+//     // background: #cdecd5;
+//     // &::after {
+//     //     content: '';
+//     //     // background: #e2c4dda2;
+//     //     position: absolute;
+//     //     width: 100%;
+//     //     height: 100%;
+//     //     top: 20px;
+//     //     left: 20px;
+//     //     border: 1px solid black;
+//     //     z-index: -100;
+//     // }
+//     .flexContainer {
+//         display: flex;
+//         margin: 7px 0;
+//     }
+//     .flexContainer.top {
+//         flex-direction: column;
+//         text-align: center;
+//     }
+//     .bottom {
+//         justify-content: space-between;
+//         align-items: flex-end;
+//         flex-wrap: wrap;
+//         .bottomRight {
+//             display: flex;
+//         }
+//     }
+//     .confessionInput {
+//         flex: 0 0 50%;
+//         border: none;
+//         // padding: 15px;
+//         resize: none;
+//         // background: #cdecd5;
+//         background: rgb(255, 255, 255);
+//         border-radius: 35px;
+//         box-shadow: 1px 2px 10px #cfcfcf33;
+//         // border: solid 1px black;
+//         // text-align: center;
+//         padding:27.5px;
+//     }
+//     // .userIcon {
+//     //     flex: 0 0 65px;
+//     //     padding: 5px;
+//     // }
+//     .killCount {
+//         font-size: 2.3rem;
+//     }
+//     .gifPreview {
+//         width: 50%;
+//         padding: 0px 0px 20px 50px;
+//     }
+//     // textarea {
+//     //     margin-right: 10px;
+//     //     &:focus {
+//     //         background: rgba(165, 165, 165, 0.068);
+//     //     }
+//     // }
+//     button.gifIcon,
+//     button.increment {
+//         background: red;
+//         border: 1px solid black;
+//         height: 100px;
+//         width: 200px;
+//         &:focus {
+//             border: dashed 2px rgb(203, 94, 206);
+//         }
+//     }
+//     .submitButton {
+//         flex: 100%;
+//         display: flex;
+//         button.submit {
+//             margin: 60px auto;
+//         }
+//     }
+// }
+
+// .formSection {
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     // background: $offWhite;
+//     form {
+//         // width: 100%;
+//         height: 220px;
+//         // margin: 0 auto;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         p.instruction{
+//             font-family: $secondaryFont;
+//             font-weight: 700;
+//             color: darken($grey, 5%);            
+//             padding-bottom: 30px;
+//             font-size: 4rem;
+//         }
+//     }
+// }
+
 
 .formSection {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // background: $offWhite;
-    form {
-        width: 80%;
-        height: 220px;
-        margin: 0 auto;
+    padding-top: 10vh;
+    height: 90vh;
+    .formContainer {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-between;
-        p.instruction{
+        align-content: center;
+        height: 100%;
+        h4 {
+            flex: 1 1 100%;
+            text-align: center;
             font-family: $secondaryFont;
             font-weight: 700;
-            color: lighten($grey, 1%);            
+            color: darken($grey, 5%);            
             padding-bottom: 30px;
             font-size: 4rem;
+        }
+        .gifPreviewContainer {
+            flex: 0 1 34%;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 1px 2px 10px #cfcfcf33;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: -20;
+            p {
+                font-style: italic;
+                position: absolute;
+                z-index: -10;
+               
+            }
+            .gifPreview {
+                width: 96%;
+                margin: 8% auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        form {
+            flex: 0 1 60%;
+            display: flex;
+            flex-wrap: wrap;
+            input.confessionInput {
+                flex: 1 1 100%;
+                border-radius: 35px;
+                box-shadow: 1px 2px 10px #cfcfcf33;
+                border: 1px solid lighten($grey, 50%);
+                padding: 16px;
+            }
+            button {
+                border-radius: 35px;
+                padding: 19px 35px;
+                background: $green;
+            }
+            button.gifIcon {
+                flex: 0 1 50%;
+            }
+            button.increment {
+                flex: 0 1 50%;
+            }
+            .submitButtonContainer {
+                flex: 1 1 100%;
+                display: flex;
+                button.submit {
+                    margin: 0 auto;
+                }
+            }
+
         }
     }
 }

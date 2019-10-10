@@ -305,9 +305,10 @@ header {
 
 .headerFlexContainer .wordContent h3 {
   font-size: 2.5rem;
-  padding: 30px 0 45px;
+  padding: 33px 0 42px;
   font-weight: 400;
   color: #54575a;
+  font-style: italic;
 }
 
 .headerFlexContainer .wordContent button {
@@ -315,8 +316,8 @@ header {
   font-weight: 900;
   color: white;
   font-size: 1.8rem;
-  background: #efa618;
-  padding: 15px 35px;
+  background: #91bd7b;
+  padding: 19px 35px;
   border-radius: 30px;
 }
 
@@ -351,7 +352,7 @@ Nav {
 Nav h1 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #484a4d;
+  color: #36383a;
   padding: 0 0 5px 25px;
   font-family: "Playfair Display", serif;
   position: relative;
@@ -373,117 +374,124 @@ Nav ol li {
   font-weight: 700;
 }
 
-form {
-  font-family: "Lato", sans-serif;
-  position: relative;
+.formSection {
+  padding-top: 10vh;
+  height: 90vh;
 }
 
-form .flexContainer {
+.formSection .formContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 7px 0;
-}
-
-form .flexContainer.top {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
-form .bottom {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
 }
 
-form .bottom .bottomRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-form .confessionInput {
+.formSection .formContainer h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  border: none;
-  padding: 15px;
-  resize: none;
-  background: rgba(255, 255, 255, 0.822);
-  border: solid 1px black;
   text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #484a4d;
+  padding-bottom: 30px;
+  font-size: 4rem;
 }
 
-form .userIcon {
+.formSection .formContainer .gifPreviewContainer {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 65px;
-          flex: 0 0 65px;
-  padding: 5px;
-}
-
-form .killCount {
-  font-size: 2.3rem;
-}
-
-form .gifPreview {
-  width: 50%;
-  padding: 0px 0px 20px 50px;
-}
-
-form textarea {
-  margin-right: 10px;
-}
-
-form textarea:focus {
-  background: rgba(165, 165, 165, 0.068);
-}
-
-form .gifIcon:focus {
-  border: dashed 2px #cb5ece;
-}
-
-.formSection {
-  height: 100vh;
+      -ms-flex: 0 1 34%;
+          flex: 0 1 34%;
+  background: white;
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 2px 10px #cfcfcf33;
+          box-shadow: 1px 2px 10px #cfcfcf33;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: -20;
 }
 
-.formSection form {
-  width: 80%;
-  height: 220px;
-  margin: 0 auto;
+.formSection .formContainer .gifPreviewContainer p {
+  font-style: italic;
+  position: absolute;
+  z-index: -10;
+}
+
+.formSection .formContainer .gifPreviewContainer .gifPreview {
+  width: 96%;
+  margin: 8% auto;
+}
+
+.formSection .formContainer .gifPreviewContainer .gifPreview img {
+  width: 100%;
+}
+
+.formSection .formContainer form {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.formSection form p.instruction {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  color: #565a5d;
-  padding-bottom: 30px;
-  font-size: 4rem;
+.formSection .formContainer form input.confessionInput {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  border-radius: 35px;
+  -webkit-box-shadow: 1px 2px 10px #cfcfcf33;
+          box-shadow: 1px 2px 10px #cfcfcf33;
+  border: 1px solid #d5d7d8;
+  padding: 16px;
+}
+
+.formSection .formContainer form button {
+  border-radius: 35px;
+  padding: 19px 35px;
+  background: #91bd7b;
+}
+
+.formSection .formContainer form button.gifIcon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.formSection .formContainer form button.increment {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.formSection .formContainer form .submitButtonContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formSection .formContainer form .submitButtonContainer button.submit {
+  margin: 0 auto;
 }
 
 button {
@@ -499,36 +507,6 @@ button {
 
 .mainButton:focus {
   border: 3px dashed #cb5ece;
-}
-
-button.submit {
-  background: #41b913;
-  color: white;
-  margin: 0 5px;
-}
-
-button.submit:focus {
-  border: dashed 2px #cb5ece;
-}
-
-button.increment {
-  margin-left: 5px;
-  border: 1.8px solid #cb5ece;
-  background: white;
-  font-weight: 400;
-  color: #cb5ece;
-}
-
-button.increment:focus {
-  border: dashed 2px #cb5ece;
-}
-
-button.gifIcon {
-  background: transparent;
-  padding: 0;
-  width: 50px;
-  margin-bottom: -12px;
-  margin-left: 4px;
 }
 
 .popUp {
@@ -590,7 +568,7 @@ button.gifIcon {
 }
 
 .gifNav button {
-  background: #41b913;
+  background: #91bd7b;
   color: white;
   border-radius: 10px;
 }
