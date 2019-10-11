@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aaron-lee-project-five/precache-manifest.4827c3a98d7d89b1ccbcd2d02c2c1bdf.js"
+  "/aaron-lee-project-five/precache-manifest.3c5d347e86f5abf2153408a7a8ea457d.js"
 );
 
 self.addEventListener('message', (event) => {
