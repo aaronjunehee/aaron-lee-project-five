@@ -105,8 +105,7 @@
 
 
 .formSection {
-    padding-top: 20vh;
-    height: 80vh;
+    height: 100vh;
     .formContainer {
         display: flex;
         flex-wrap: wrap;
@@ -166,6 +165,8 @@
                 background: $blue;
                 margin: 20px 0;
                 color: white;
+                font-weight: 700;
+                cursor: pointer;
                 // max-height: 80px;
             }
             button.gifIcon {
@@ -173,6 +174,7 @@
             }
             button.increment {
                 flex: 0 1 49%;
+                border: none;
             }
             button.submit {
                 flex: 1 1 100%;
