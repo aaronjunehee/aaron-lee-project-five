@@ -70,10 +70,10 @@ class GifFinder extends Component {
         const { activeItemUrl } = this.state;
         // const selectionVis = activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide';
         return (
-            <div className="popUp">
+            <div className="gifModalBackground">
 
-                <div className="gifContainer">
-                    <form className="gifNav">
+                <div className="gifModalContainer">
+                    <form className="gifModalNav">
                         <i 
                             className="fas fa-times close" 
                             onClick={this.props.toggle}

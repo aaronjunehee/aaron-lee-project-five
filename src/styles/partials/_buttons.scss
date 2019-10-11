@@ -11,31 +11,31 @@ button {
     }
 }
 
-// button.submit {
-//     background: $green;
-//     color: white;
-//     // margin: 0 5px;
-//     &:focus {
-//             border: dashed 2px rgb(203, 94, 206);
-//         }
-// }
+button.submit {
+    background: $green;
+    color: white;
+    // margin: 0 5px;
+    &:focus {
+            border: dashed 2px rgb(203, 94, 206);
+        }
+}
 
-// button.increment {
-//     margin-left: 5px;
-//     border: 1.8px solid rgb(203, 94, 206);
-//     background: white;
-//     font-weight: 400;
-//     color: rgb(203, 94, 206);
-//     &:focus {
-//             border: dashed 2px rgb(203, 94, 206);
-//         }
-// }
+button.increment {
+    margin-left: 5px;
+    border: 1.8px solid rgb(203, 94, 206);
+    background: white;
+    font-weight: 400;
+    color: rgb(203, 94, 206);
+    &:focus {
+            border: dashed 2px rgb(203, 94, 206);
+        }
+}
 
-// button.gifIcon {
-//     background: transparent;
-//     padding: 0;
-//     // border-radius: 50%;
-//     width: 50px;
-//     margin-bottom: -12px;
-//     margin-left: 4px;
-// }
+button.gifIcon {
+    background: transparent;
+    padding: 0;
+    // border-radius: 50%;
+    width: 50px;
+    margin-bottom: -12px;
+    margin-left: 4px;
+}

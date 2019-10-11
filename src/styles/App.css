@@ -512,7 +512,36 @@ button {
   border: 3px dashed #cb5ece;
 }
 
-.popUp {
+button.submit {
+  background: #91bd7b;
+  color: white;
+}
+
+button.submit:focus {
+  border: dashed 2px #cb5ece;
+}
+
+button.increment {
+  margin-left: 5px;
+  border: 1.8px solid #cb5ece;
+  background: white;
+  font-weight: 400;
+  color: #cb5ece;
+}
+
+button.increment:focus {
+  border: dashed 2px #cb5ece;
+}
+
+button.gifIcon {
+  background: transparent;
+  padding: 0;
+  width: 50px;
+  margin-bottom: -12px;
+  margin-left: 4px;
+}
+
+.gifModalBackground {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -524,7 +553,7 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.gifContainer {
+.gifModalBackground .gifModalContainer {
   position: absolute;
   left: 25%;
   right: 25%;
@@ -535,20 +564,7 @@ button {
   overflow: scroll;
 }
 
-.close {
-  margin: 10px;
-}
-
-.gifItem {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.show img {
-  opacity: 0.5;
-}
-
-.gifNav {
+.gifModalBackground form.gifModalNav {
   padding: 10px;
   position: fixed;
   background: white;
@@ -562,7 +578,11 @@ button {
   left: 25%;
 }
 
-.gifNav input {
+.gifModalBackground form.gifModalNav .close {
+  margin: 10px;
+}
+
+.gifModalBackground form.gifModalNav input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40%;
           flex: 1 1 40%;
@@ -570,10 +590,22 @@ button {
   margin: 0 10px;
 }
 
-.gifNav button {
-  background: #91bd7b;
+.gifModalBackground form.gifModalNav button {
   color: white;
-  border-radius: 10px;
+  border-radius: 35px;
+  padding: 10px;
+  background: #5ba5a4;
+  margin: 0;
+  color: white;
+}
+
+.gifItem {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.show img {
+  opacity: 0.5;
 }
 
 .gifResults {
