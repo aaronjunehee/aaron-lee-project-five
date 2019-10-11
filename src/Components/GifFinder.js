@@ -59,6 +59,13 @@ class GifFinder extends Component {
         })
     }
 
+    _handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            console.log(this.state.search);
+            this.getGifs(this.state.search);
+        }
+    }
+
     render() {
         const { activeItemUrl } = this.state;
         // const selectionVis = activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide';
@@ -66,16 +73,21 @@ class GifFinder extends Component {
             <div className="popUp">
 
                 <div className="gifContainer">
-                    <div className="gifNav">
-                        <i className="fas fa-times close" onClick={this.props.toggle}></i>
+                    <form className="gifNav">
+                        <i 
+                            className="fas fa-times close" 
+                            onClick={this.props.toggle}
+                            >
+                        </i>
                         <input
                             onChange={this.handleChange}
                             name="searchGifs"
                             value={this.state.search} 
-                            type="text" 
+                            type="text"
+                            onKeyDown={this._handleKeyDown} 
                         />
                         <button onClick={this.handleSubmit}>Find Gif's!</button>
-                    </div>
+                    </form>
                     <div className="gifResults">
                         {this.state.search ? (this.state.gifs.map(gifItem => {
                             return (

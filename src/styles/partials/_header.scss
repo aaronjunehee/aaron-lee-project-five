@@ -13,16 +13,16 @@ header {
     .wordContent {
         flex: 1 1 50%;
         // margin-top: 20px;
-         h2 {
-            font-size: 5.5rem;
-            line-height: 6rem;
+        h2 {
+            font-size: 5.8rem;
+            line-height: 6.2rem;
             letter-spacing: .2rem;
             word-spacing: .4rem;
             font-weight:900;
             color: $grey;
         }
         h3 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             padding: 33px 0 42px;
             // line-height: 5rem;
             // word-spacing: -10px;
@@ -35,11 +35,11 @@ header {
             font-family: $primaryFont;
             font-weight: 900;
             color: white;
-            font-size: 1.8rem;
+            font-size: 2rem;
             // background: $blue;
             background: $green;
-            padding: 19px 35px;
-            border-radius: 30px;
+            padding: 24px 50px;
+            border-radius: 35px;
         }
     }
 

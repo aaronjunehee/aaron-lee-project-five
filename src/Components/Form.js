@@ -112,9 +112,9 @@ class Form extends Component {
                     <button onClick={this.incrementCount} className="increment">Number of Kills <span className="killCount">x{this.state.killCount}</span></button>
             	        
 
-                        <div className="submitButtonContainer">
+                       
                             <button onClick={this.handleSubmit} className="submit">Submit</button>
-                        </div>
+                    
                     
             	</form>
                 
