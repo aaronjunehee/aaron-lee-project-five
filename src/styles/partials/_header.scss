@@ -1,100 +1,50 @@
 header {
-    // background: $offWhite;
-    padding-top: 10vh;
-}
+    padding-top: 80px; // accounting for the fixed nav space
+    height: 100vh;
 
-.headerFlexContainer {
-    height: 90vh;
-    display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    align-items: center;
-    
-    .wordContent {
-        flex: 1 1 50%;
-        // margin-top: 20px;
-        h2 {
-            font-size: 5.8rem;
-            line-height: 6.2rem;
-            letter-spacing: .2rem;
-            word-spacing: .4rem;
-            font-weight:900;
-            color: $grey;
-        }
-        h3 {
-            font-size: 2.8rem;
-            padding: 33px 0 42px;
-            // line-height: 5rem;
-            // word-spacing: -10px;
-            font-weight: 400;
-            color: $grey;
-            // color: $grey;
-            font-style: italic;
-        }
-        button {
-            font-family: $primaryFont;
-            font-weight: 900;
-            color: white;
-            font-size: 2rem;
-            // background: $blue;
-            background: $green;
-            padding: 24px 50px;
-            border-radius: 35px;
-            cursor: pointer;
-        }
+    .wrapper,
+    .headerFlexContainer {
+        height: 100%;
     }
 
-
-    // .chevron {
-    //     flex: 1 1 50%;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: flex-end;
-    //     button {
-    //         background: red;
-    //     }
-    //     img {
-    //         width: 60px;
-    //         margin-bottom: 30px;
-    //         background: transparent;
-    //     }
+    .headerFlexContainer {
+        display: flex;
+        align-items: center;
         
-    // }
-    // span.highlight {
-    //     position: relative;
-    // }
+        .titleContainer {
+            flex: 1 1 50%;
+            
+            h2 {
+                font-size: 5.8rem;
+                line-height: 6.2rem;
+                letter-spacing: .2rem;
+                word-spacing: .4rem;
+                font-weight:900;
+                color: $grey;
+            }
 
-    // span.highlight::after {
-        
-	// 		content: "";
-	// 		width: 104%;
-	// 		height: 50%;
-	// 		position: absolute;
-    //         left: -2%;
-	// 		bottom: 0%;
-    //         background-color: rgba(131, 206, 124, 0.781);
-    //         background: #cdecd58c;
-    //         z-index: -10;
-		
-    // }
-    // .plant1 {
-    //     position: absolute;
-    //     left: 0;
-    //     bottom: 0;
-    //     z-index: -10;
-    //     width: 35%;
-    // }
-    .plant2 {
-        // position: absolute;
-        // right: 0;
-        // top: 0;
-        // z-index: 10;
-        // width: 34%;
-        flex: 1 1 50%;
-        // padding-right: 30px;
-        img {
-            width: 100%;
+            h3 {
+                font-size: 2.8rem;
+                padding: 33px 0 42px;
+                font-weight: 400;
+                color: $grey;
+                font-style: italic;
+            }
+
+            button.mainButton {
+                background: $green;
+                padding: 24px 50px;
+                &:hover {
+                    background: darken($green, 10%);
+                }
+            }
+        }
+
+        .cactusImageContainer {
+            flex: 1 1 50%;
         }
     }
 }
+
+
 

@@ -1,42 +1,37 @@
-.userComments {
-    padding-top: 10vh;
+.commentSection {
+    padding-top: 80px;
+
+    .userCommentsContainer {
+        column-width: 250px;
+        column-gap: 10px;
+        padding: 5px; 
+
         .userComment {
             border: 1px solid rgba(114, 114, 114, 0.425);
             width: 100%;
             margin-bottom: 5px;
             background: white;
-            // padding: 2.5%;
             box-shadow: 5px 5px 15px #a1a1a150;
             break-inside: avoid;
             border-radius: 25px;
-        .userCommentGif {
-            width: 100%;
-            margin: 8% auto 2%;
-        }
-    } 
+
+            .userCommentGif {
+                width: 100%;
+                margin: 8% auto 2%;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 2rem;
+                padding: 15px;
+            }
+
+            .deathCount {
+                text-align: right;
+                padding: 0 15px 15px 0;
+                font-weight: 700;
+            }
+        } 
+    }
 }
 
-
-
-
-
-.userCommentContainer {
-    column-width: 250px;
-    column-gap: 10px;
-    padding: 5px;
-    
-}
-
-
-
-h4 {
-    font-weight: 700;
-    font-size: 2rem;
-    padding: 15px
-}
-
-.deathCount {
-    text-align: right;
-    padding: 0 15px 5px 0;
-    font-weight: 700;
-}

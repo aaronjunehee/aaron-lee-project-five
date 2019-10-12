@@ -1,126 +1,27 @@
-// form {
-//     // border: 1px solid black;
-//     font-family: $primaryFont;
-//     // position: relative;
-//     // background: rgba(255, 255, 255, 0.822);
-//     // background: #cdecd5;
-//     // &::after {
-//     //     content: '';
-//     //     // background: #e2c4dda2;
-//     //     position: absolute;
-//     //     width: 100%;
-//     //     height: 100%;
-//     //     top: 20px;
-//     //     left: 20px;
-//     //     border: 1px solid black;
-//     //     z-index: -100;
-//     // }
-//     .flexContainer {
-//         display: flex;
-//         margin: 7px 0;
-//     }
-//     .flexContainer.top {
-//         flex-direction: column;
-//         text-align: center;
-//     }
-//     .bottom {
-//         justify-content: space-between;
-//         align-items: flex-end;
-//         flex-wrap: wrap;
-//         .bottomRight {
-//             display: flex;
-//         }
-//     }
-//     .confessionInput {
-//         flex: 0 0 50%;
-//         border: none;
-//         // padding: 15px;
-//         resize: none;
-//         // background: #cdecd5;
-//         background: rgb(255, 255, 255);
-//         border-radius: 35px;
-//         box-shadow: 1px 2px 10px #cfcfcf33;
-//         // border: solid 1px black;
-//         // text-align: center;
-//         padding:27.5px;
-//     }
-//     // .userIcon {
-//     //     flex: 0 0 65px;
-//     //     padding: 5px;
-//     // }
-//     .killCount {
-//         font-size: 2.3rem;
-//     }
-//     .gifPreview {
-//         width: 50%;
-//         padding: 0px 0px 20px 50px;
-//     }
-//     // textarea {
-//     //     margin-right: 10px;
-//     //     &:focus {
-//     //         background: rgba(165, 165, 165, 0.068);
-//     //     }
-//     // }
-//     button.gifIcon,
-//     button.increment {
-//         background: red;
-//         border: 1px solid black;
-//         height: 100px;
-//         width: 200px;
-//         &:focus {
-//             border: dashed 2px rgb(203, 94, 206);
-//         }
-//     }
-//     .submitButton {
-//         flex: 100%;
-//         display: flex;
-//         button.submit {
-//             margin: 60px auto;
-//         }
-//     }
-// }
-
-// .formSection {
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     // background: $offWhite;
-//     form {
-//         // width: 100%;
-//         height: 220px;
-//         // margin: 0 auto;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         p.instruction{
-//             font-family: $secondaryFont;
-//             font-weight: 700;
-//             color: darken($grey, 5%);            
-//             padding-bottom: 30px;
-//             font-size: 4rem;
-//         }
-//     }
-// }
-
-
-.formSection {
+section.formSection {
     height: 100vh;
+    padding-top: 40px;
+
+    .formContainer,
+    .wrapper {
+        height: 100%;
+    }
+
     .formContainer {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-content: center;
-        height: 100%;
+        flex-wrap: wrap;
+
         h4 {
             flex: 1 1 100%;
             text-align: center;
             font-family: $secondaryFont;
-            font-weight: 700;
             color: darken($grey, 5%);            
-            padding: 60px 0;
+            margin-bottom: 40px;
             font-size: 5rem;
         }
+        
         .gifPreviewContainer {
             flex: 0 1 32%;
             background: white;
@@ -131,13 +32,14 @@
             align-items: center;
             position: relative;
             z-index: -20;
-            p {
+
+            p.gifPreviewTitle {
                 font-style: italic;
                 position: absolute;
                 z-index: -10;
-               
             }
-            .gifPreview {
+
+            .selectedGifContainer {
                 width: 96%;
                 margin: 8% auto;
                 img {
@@ -146,49 +48,41 @@
                 }
             }
         }
+
         form {
             flex: 0 1 65%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: flex-start;
-            input.confessionInput {
+
+            .messageInput {
                 flex: 1 1 100%;
                 border-radius: 35px;
                 box-shadow: 1px 2px 10px #cfcfcf33;
                 border: 1px solid lighten($grey, 50%);
                 padding: 25px;
+                padding-left: 30px;
             }
-            button {
-                border-radius: 35px;
-                padding: 24px;
+
+            button.gifModal,
+            button.killCount {
+                flex: 0 1 49%;
                 background: $blue;
                 margin: 20px 0;
-                color: white;
-                font-weight: 700;
-                cursor: pointer;
-                // max-height: 80px;
+                &:hover {
+                    background: darken($blue, 10%);
+                }
             }
-            button.gifIcon {
-                flex: 0 1 49%;
-            }
-            button.increment {
-                flex: 0 1 49%;
-                border: none;
-            }
+            
             button.submit {
                 flex: 1 1 100%;
                 background: $green;
                 margin: 0;
+                &:hover {
+                    background: darken($green, 10%);
+                }
             }
-            // .submitButtonContainer {
-            //     flex: 1 1 100%;
-            //     display: flex;
-            //     button.submit {
-            //         margin: 0 auto;
-            //     }
-            // }
-
         }
     }
 }

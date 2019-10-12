@@ -76,8 +76,7 @@ class GifFinder extends Component {
                     <form className="gifModalNav">
                         <i 
                             className="fas fa-times close" 
-                            onClick={this.props.toggle}
-                            >
+                            onClick={this.props.toggle}>
                         </i>
                         <input
                             onChange={this.handleChange}
@@ -100,8 +99,7 @@ class GifFinder extends Component {
                             )
                         })) : (<p></p>)}
                     </div>
-                </div>
-                
+                </div>   
             </div>
         );
     }

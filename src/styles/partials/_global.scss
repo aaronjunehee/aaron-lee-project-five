@@ -7,8 +7,6 @@ body {
     font-size: 2rem;
     font-family: $primaryFont;
     background: $offWhite;
-    // background: url(../../images/white.jpg);
-    // background-size: contain;
 }
 
 ul {
@@ -21,8 +19,10 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+ol {
     margin: 0;
+    padding: 0;
 }
 
 

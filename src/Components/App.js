@@ -41,15 +41,14 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        
-          <Header />
-          <main name="main">
-            <section className="formSection">
+        <Header />
+          <main>
+          <section className="formSection" name="form">
               <Form />
             </section>
-          <section name="test" className="userComments">
+          <section className="commentSection" name="comments">
               <div className="wrapper">
-                <ul className="userCommentContainer">
+                <ul className="userCommentsContainer">
                   {this.state.userComments.map(userComments => {
                     return ( 
                       <UserComment 
