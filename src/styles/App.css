@@ -270,6 +270,29 @@ img {
   display: block;
 }
 
+main {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.smoothScrollContainer {
+  scroll-behavior: smooth;
+  overflow: auto;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+header,
+main {
+  scroll-snap-align: start;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 1000px;
