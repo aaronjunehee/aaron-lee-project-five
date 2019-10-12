@@ -8,11 +8,23 @@ Nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    @media (max-width: 775px) {
+        height: 60px;
+    }
     h1 {
         font-family: $secondaryFont;
         font-size: 2.6rem;
         color: darken($grey, 15%);
         padding: 0 0 5px 30px;
+        @media (max-width: 940px) {
+            font-size: 2.3rem;
+        }
+        @media (max-width: 775px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 400px) {
+            font-size: 1.8rem;
+        } 
     }
     ol {
         display: flex;
@@ -28,5 +40,10 @@ Nav {
                 color: darken($grey, 20%);
             }
         }
+        @media (max-width: 940px) {
+            display: none;
+        }
     }  
 }
+
+// to do: figure out how to dynamically add a hamburger burger

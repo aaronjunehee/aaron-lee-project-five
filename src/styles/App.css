@@ -276,9 +276,21 @@ img {
   max-width: 80%;
 }
 
+@media (max-width: 775px) {
+  .wrapper {
+    max-width: 95%;
+  }
+}
+
 header {
   padding-top: 80px;
   height: 100vh;
+}
+
+@media (max-width: 775px) {
+  header {
+    padding-top: 60px;
+  }
 }
 
 header .wrapper,
@@ -295,19 +307,75 @@ header .headerFlexContainer {
           align-items: center;
 }
 
+@media (max-width: 775px) {
+  header .headerFlexContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 header .headerFlexContainer .titleContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
 }
 
+@media (max-width: 1170px) {
+  header .headerFlexContainer .titleContainer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
+  }
+}
+
+@media (max-width: 775px) {
+  header .headerFlexContainer .titleContainer {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
 header .headerFlexContainer .titleContainer h2 {
   font-size: 5.8rem;
-  line-height: 6.2rem;
+  line-height: 6.3rem;
   letter-spacing: .2rem;
   word-spacing: .4rem;
   font-weight: 900;
   color: #54575a;
+}
+
+@media (max-width: 1170px) {
+  header .headerFlexContainer .titleContainer h2 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+}
+
+@media (max-width: 940px) {
+  header .headerFlexContainer .titleContainer h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    word-spacing: .2rem;
+  }
+}
+
+@media (max-width: 775px) {
+  header .headerFlexContainer .titleContainer h2 {
+    text-align: center;
+    word-spacing: .1rem;
+    letter-spacing: .1rem;
+    line-height: 4.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header .headerFlexContainer .titleContainer h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
 }
 
 header .headerFlexContainer .titleContainer h3 {
@@ -316,6 +384,20 @@ header .headerFlexContainer .titleContainer h3 {
   font-weight: 400;
   color: #54575a;
   font-style: italic;
+}
+
+@media (max-width: 940px) {
+  header .headerFlexContainer .titleContainer h3 {
+    font-size: 2.2rem;
+    padding: 25px 0 30px;
+  }
+}
+
+@media (max-width: 775px) {
+  header .headerFlexContainer .titleContainer h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
 header .headerFlexContainer .titleContainer button.mainButton {
@@ -327,10 +409,54 @@ header .headerFlexContainer .titleContainer button.mainButton:hover {
   background: #75ac59;
 }
 
+@media (max-width: 1170px) {
+  header .headerFlexContainer .titleContainer button.mainButton {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 940px) {
+  header .headerFlexContainer .titleContainer button.mainButton {
+    padding: 18px 30px;
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 775px) {
+  header .headerFlexContainer .titleContainer button.mainButton {
+    padding: 15px 30px;
+    font-size: 1.8rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 header .headerFlexContainer .cactusImageContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+}
+
+@media (max-width: 775px) {
+  header .headerFlexContainer .cactusImageContainer {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  header .headerFlexContainer .cactusImageContainer img {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  header .headerFlexContainer .cactusImageContainer img {
+    width: 200px;
+    padding-bottom: 10px;
+  }
 }
 
 Nav {
@@ -352,11 +478,35 @@ Nav {
   z-index: 1000;
 }
 
+@media (max-width: 775px) {
+  Nav {
+    height: 60px;
+  }
+}
+
 Nav h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.6rem;
   color: #2f3132;
   padding: 0 0 5px 30px;
+}
+
+@media (max-width: 940px) {
+  Nav h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 775px) {
+  Nav h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  Nav h1 {
+    font-size: 1.8rem;
+  }
 }
 
 Nav ol {
@@ -378,6 +528,12 @@ Nav ol li {
 
 Nav ol li:hover {
   color: #232425;
+}
+
+@media (max-width: 940px) {
+  Nav ol {
+    display: none;
+  }
 }
 
 section.formSection {
@@ -511,7 +667,6 @@ button {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   color: white;
-  font-size: 2rem;
   padding: 24px;
   cursor: pointer;
   -webkit-transition: .2s;

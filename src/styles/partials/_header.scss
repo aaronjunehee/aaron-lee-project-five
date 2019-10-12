@@ -1,6 +1,9 @@
 header {
     padding-top: 80px; // accounting for the fixed nav space
     height: 100vh;
+    @media (max-width: 775px) {
+        padding-top: 60px;
+    }
 
     .wrapper,
     .headerFlexContainer {
@@ -10,17 +13,45 @@ header {
     .headerFlexContainer {
         display: flex;
         align-items: center;
+        @media (max-width: 775px) {
+            flex-wrap: wrap;
+            align-content: center;
+        }
         
         .titleContainer {
             flex: 1 1 50%;
-            
+            @media (max-width: 1170px) {
+                flex: 1 1 60%;
+            }
+            @media (max-width: 775px) {
+                flex: 1 1 100%;
+            }
             h2 {
                 font-size: 5.8rem;
-                line-height: 6.2rem;
+                line-height: 6.3rem;
                 letter-spacing: .2rem;
                 word-spacing: .4rem;
                 font-weight:900;
                 color: $grey;
+                @media (max-width: 1170px) {
+                    font-size: 5rem;
+                    line-height: 5.5rem;
+                }
+                @media (max-width: 940px) {
+                    font-size: 4rem;
+                    line-height: 4.8rem;
+                    word-spacing: .2rem;
+                }
+                @media (max-width: 775px) {
+                    text-align: center;
+                    word-spacing: .1rem;
+                    letter-spacing: .1rem;
+                    line-height: 4.4rem;
+                }
+                @media (max-width: 400px) {
+                    font-size: 3.5rem;
+                    line-height: 4rem;
+                }   
             }
 
             h3 {
@@ -29,6 +60,14 @@ header {
                 font-weight: 400;
                 color: $grey;
                 font-style: italic;
+                @media (max-width: 940px) {
+                    font-size: 2.2rem;
+                    padding: 25px 0 30px;
+                }
+                @media (max-width: 775px) {
+                    font-size: 2rem;
+                    text-align: center;
+                }   
             }
 
             button.mainButton {
@@ -37,11 +76,38 @@ header {
                 &:hover {
                     background: darken($green, 10%);
                 }
+                @media (max-width: 1170px) {
+                    padding: 20px 40px;
+                }
+                @media (max-width: 940px) {
+                    padding: 18px 30px;
+                    font-size: 1.9rem;
+                }
+                @media (max-width: 775px) {
+                    padding: 15px 30px;
+                    font-size: 1.8rem;
+                    display: block;
+                    margin: 0 auto;
+                }  
             }
         }
 
         .cactusImageContainer {
             flex: 1 1 50%;
+            @media (max-width: 775px) {
+                order: -1;
+                flex: 1 1 100%;
+                img {
+                    width: 250px;
+                    margin: 0 auto;
+                }
+            }
+            @media (max-width: 400px) {
+                img {
+                    width: 200px;
+                    padding-bottom: 10px;
+                }
+            } 
         }
     }
 }
