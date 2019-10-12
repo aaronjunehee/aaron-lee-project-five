@@ -63,7 +63,7 @@ class App extends Component {
               </div>
             </section>
           </main>
-        
+        {/* add a footer here */}
       </div>
     );
   }

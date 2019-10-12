@@ -373,8 +373,7 @@ header .headerFlexContainer .titleContainer h2 {
 
 @media (max-width: 400px) {
   header .headerFlexContainer .titleContainer h2 {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 4rem;
   }
 }
 
@@ -397,6 +396,12 @@ header .headerFlexContainer .titleContainer h3 {
   header .headerFlexContainer .titleContainer h3 {
     font-size: 2rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  header .headerFlexContainer .titleContainer h3 {
+    padding: 17px 0 22px;
   }
 }
 
@@ -424,8 +429,6 @@ header .headerFlexContainer .titleContainer button.mainButton:hover {
 
 @media (max-width: 775px) {
   header .headerFlexContainer .titleContainer button.mainButton {
-    padding: 15px 30px;
-    font-size: 1.8rem;
     display: block;
     margin: 0 auto;
   }
@@ -455,7 +458,7 @@ header .headerFlexContainer .cactusImageContainer {
 @media (max-width: 400px) {
   header .headerFlexContainer .cactusImageContainer img {
     width: 200px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 }
 
@@ -488,7 +491,7 @@ Nav h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.6rem;
   color: #2f3132;
-  padding: 0 0 5px 30px;
+  padding: 0 0 3px 20px;
 }
 
 @media (max-width: 940px) {
@@ -500,12 +503,6 @@ Nav h1 {
 @media (max-width: 775px) {
   Nav h1 {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 400px) {
-  Nav h1 {
-    font-size: 1.8rem;
   }
 }
 
@@ -559,6 +556,14 @@ section.formSection .formContainer {
       flex-wrap: wrap;
 }
 
+@media (max-width: 870px) {
+  section.formSection .formContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 section.formSection .formContainer h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
@@ -568,6 +573,19 @@ section.formSection .formContainer h4 {
   color: #484a4d;
   margin-bottom: 40px;
   font-size: 5rem;
+}
+
+@media (max-width: 870px) {
+  section.formSection .formContainer h4 {
+    font-size: 4.2rem;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  section.formSection .formContainer h4 {
+    font-size: 3.4rem;
+  }
 }
 
 section.formSection .formContainer .gifPreviewContainer {
@@ -591,6 +609,18 @@ section.formSection .formContainer .gifPreviewContainer {
   z-index: -20;
 }
 
+@media (max-width: 870px) {
+  section.formSection .formContainer .gifPreviewContainer {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 280px;
+            flex: 0 1 280px;
+    height: 200px;
+  }
+}
+
 section.formSection .formContainer .gifPreviewContainer p.gifPreviewTitle {
   font-style: italic;
   position: absolute;
@@ -602,9 +632,24 @@ section.formSection .formContainer .gifPreviewContainer .selectedGifContainer {
   margin: 8% auto;
 }
 
+@media (max-width: 870px) {
+  section.formSection .formContainer .gifPreviewContainer .selectedGifContainer {
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+
 section.formSection .formContainer .gifPreviewContainer .selectedGifContainer img {
   width: 100%;
   max-height: 460px;
+}
+
+@media (max-width: 870px) {
+  section.formSection .formContainer .gifPreviewContainer .selectedGifContainer img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 section.formSection .formContainer form {
@@ -623,6 +668,14 @@ section.formSection .formContainer form {
       align-content: flex-start;
 }
 
+@media (max-width: 870px) {
+  section.formSection .formContainer form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 370px;
+            flex: 0 1 370px;
+  }
+}
+
 section.formSection .formContainer form .messageInput {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
@@ -633,6 +686,14 @@ section.formSection .formContainer form .messageInput {
   border: 1px solid #d5d7d8;
   padding: 25px;
   padding-left: 30px;
+}
+
+@media (max-width: 870px) {
+  section.formSection .formContainer form .messageInput {
+    padding: 20px;
+    padding-left: 25px;
+    font-size: 1.8rem;
+  }
 }
 
 section.formSection .formContainer form button.gifModal,
@@ -649,6 +710,15 @@ section.formSection .formContainer form button.killCount:hover {
   background: #498484;
 }
 
+@media (max-width: 870px) {
+  section.formSection .formContainer form button.gifModal,
+  section.formSection .formContainer form button.killCount {
+    padding: 20px;
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+}
+
 section.formSection .formContainer form button.submit {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
@@ -659,6 +729,13 @@ section.formSection .formContainer form button.submit {
 
 section.formSection .formContainer form button.submit:hover {
   background: #75ac59;
+}
+
+@media (max-width: 870px) {
+  section.formSection .formContainer form button.submit {
+    padding: 20px;
+    font-size: 1.8rem;
+  }
 }
 
 button {
@@ -702,6 +779,24 @@ button:active {
   overflow: scroll;
 }
 
+@media (max-width: 940px) {
+  .gifModalBackground .gifModalContainer {
+    left: 15%;
+    right: 15%;
+    top: 15%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 650px) {
+  .gifModalBackground .gifModalContainer {
+    left: 5%;
+    right: 5%;
+    top: 15%;
+    bottom: 5%;
+  }
+}
+
 .gifModalBackground form.gifModalNav {
   padding: 10px;
   position: fixed;
@@ -716,9 +811,29 @@ button:active {
   left: 25%;
 }
 
+@media (max-width: 940px) {
+  .gifModalBackground form.gifModalNav {
+    right: 15%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 650px) {
+  .gifModalBackground form.gifModalNav {
+    right: 5%;
+    left: 5%;
+  }
+}
+
 .gifModalBackground form.gifModalNav .close {
   margin: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 825px) {
+  .gifModalBackground form.gifModalNav .close {
+    margin: 10px 5px;
+  }
 }
 
 .gifModalBackground form.gifModalNav input {
@@ -729,6 +844,14 @@ button:active {
   margin: 0 10px;
 }
 
+@media (max-width: 445px) {
+  .gifModalBackground form.gifModalNav input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
+  }
+}
+
 .gifModalBackground form.gifModalNav button {
   color: white;
   border-radius: 35px;
@@ -736,6 +859,12 @@ button:active {
   background: #5ba5a4;
   margin: 0;
   color: white;
+}
+
+@media (max-width: 445px) {
+  .gifModalBackground form.gifModalNav button {
+    font-size: 1.4rem;
+  }
 }
 
 .gifItem {
