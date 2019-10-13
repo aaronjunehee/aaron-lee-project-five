@@ -1,11 +1,7 @@
 import React, { Component } from 'react'; 
 import firebase from '../firebase';
 import GifFinder from './GifFinder';
-import leaf from '../images/leaf.svg';
-import gifIcon from '../images/gifIcon.svg';
-import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import plant1 from '../images/plant1.png';
 
 class Form extends Component {
     constructor(){
@@ -69,7 +65,11 @@ class Form extends Component {
     }
 
     moveToSection = () => {
-        scroller.scrollTo('test');
+        scroller.scrollTo('comments', {
+            duration: 1000,
+            delay: 100,
+            smooth: "easeInOutQuint",
+        });
         
     }
     

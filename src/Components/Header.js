@@ -8,7 +8,11 @@ import cactus from '../images/cactus.png';
 class Header extends Component {
 
     moveToSection = () => {
-        scroller.scrollTo('form');
+        scroller.scrollTo('form', {
+            duration: 1000,
+            delay: 100,
+            smooth: "easeInOutQuint",
+        });
     }
 
     render(){
