@@ -9,12 +9,14 @@ class GifFinder extends Component {
             gifs: [],
             search: '',
             // selectedGif: false,
-            activeItemUrl: null
+            activeItemUrl: null,
+            isLoading: true,
         };
         
     }
 
     getGifs = (search) => {
+        // making an AJAX request
         axios({
             method:'GET',
             url: 'https://api.giphy.com/v1/gifs/search',
@@ -26,7 +28,8 @@ class GifFinder extends Component {
         }).then(results => {
             results = results.data.data
             this.setState({
-                gifs: results
+                gifs: results,
+                isLoading: false,
             })
             console.log(this.state.gifs);
         })
@@ -88,7 +91,7 @@ class GifFinder extends Component {
                         <button onClick={this.handleSubmit}>Find Gif's!</button>
                     </form>
                     <div className="gifResults">
-                        {this.state.search ? (this.state.gifs.map(gifItem => {
+                        {/* {this.state.gifs ? (this.state.gifs.map(gifItem => {
                             return (
                                 <div 
                                     className={activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide'}
@@ -97,7 +100,27 @@ class GifFinder extends Component {
                                     <img src={gifItem.images.fixed_height.url} />
                                 </div>
                             )
-                        })) : (<p></p>)}
+                        })) : (<p>...Loading</p>)} */}
+
+                        {this.state.isLoading ? (<p>Search for a gif!</p>):(
+                            this.state.gifs.map(gifItem => {
+                            return (
+                                <div
+                            className={activeItemUrl === gifItem.images.fixed_width.url ? 'show' : 'hide'}
+                            key={gifItem.id}
+                            onClick={() => this.handleClick(gifItem.images.fixed_width.url)}>
+                            <img src={gifItem.images.fixed_height.url} />
+                        </div>
+                            );
+                        }))}
+
+
+
+
+
+                    
+
+
                     </div>
                 </div>   
             </div>

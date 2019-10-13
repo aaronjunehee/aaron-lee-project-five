@@ -19,6 +19,17 @@
         // border-radius: 20px;
         background: white;
         overflow:scroll;
+        .gifResults {
+            // height: 100%;
+            // position: relative;
+            p {
+                position: absolute;
+                top: 50%;
+                left:0;
+                right: 0;
+                text-align: center;
+            }
+        }
         @media (max-width: 940px) {
             left: 15%;
             right: 15%;

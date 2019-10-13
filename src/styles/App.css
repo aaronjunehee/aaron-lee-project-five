@@ -778,6 +778,14 @@ button:active {
   overflow: scroll;
 }
 
+.gifModalBackground .gifModalContainer .gifResults p {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 @media (max-width: 940px) {
   .gifModalBackground .gifModalContainer {
     left: 15%;
