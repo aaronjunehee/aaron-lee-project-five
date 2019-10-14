@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+// Component to get user search results from Giphy API 
+// Logical flow:
+    // - User searches for what type of gif they are looking for by input into search query
+    // - On submit (or keyboard enter), the users search is passed to AJAX function
+    // - AJAX function will make an API call to asynchronously retrieve searched Gifs  
+    // - Results from API call is passed onto handler which then sets it to state
+    // - From state, we MAP the results out as JSX and then render it onto the page
+    // - User selects a Gif from selection which is (1) saved to state (2) passed up to Form.js through a function in props
+
     
 class GifFinder extends Component {
     constructor() {
@@ -11,7 +20,6 @@ class GifFinder extends Component {
             selectedGifUrl: null,
             userHasNotSearched: true,
         };
-        
     }
 
     handleChange = (event) => {
@@ -25,7 +33,7 @@ class GifFinder extends Component {
         this.getGifs(this.state.search);
     }
 
-    // This function will allow us to asynchronously retrieve specifically searched Gifs by completing an API call 
+    // This function will allow us to asynchronously retrieve searched Gifs by completing an API call 
     async getGifs (search) {
         // making an AJAX request
         try {
@@ -82,17 +90,15 @@ class GifFinder extends Component {
         )
     }
 
-
-    // This method will
-    // 1) update the state of selectedGifUrl each time a new gif is clicked on
-    // 2) send gifUrl information to Form component through prop callback function
+    // When user clicks on Gif, this method will:
+        // 1) update the state of selectedGifUrl each time a new gif is clicked on
+        // 2) send gifUrl information up to Form component through props callback function
     onSelectedGifChange = (gifUrl) => {
-        this.props.gifParentCallback(gifUrl);
+        this.props.getGifUrlFromComponent(gifUrl);
         this.setState({
             selectedGifUrl: gifUrl
         })
     }
-
 
     emptySearch = () => {
         this.setState({
@@ -127,7 +133,7 @@ class GifFinder extends Component {
                     </form>
                    
                     {/* if the variable userHasNotSearched is true, return <p>Search for a gif!</p>, otherwise return gif search results  */}
-                   { this.state.userHasNotSearched ? this.renderEmptyState() : this.renderSearchedGifs() }
+                    { this.state.userHasNotSearched ? this.renderEmptyState() : this.renderSearchedGifs() }
                     
                 </div>   
             </div>

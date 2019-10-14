@@ -1,13 +1,13 @@
 import React from 'react';
 
-const UserComment = (prop) => {
+const UserComment = ({gif, message, numOfKills}) => {
     return (
         <li className="userComment">
             <div className="userCommentGif">
-                <img src={prop.gif} />
+                <img src={gif} />
             </div>
-            <h4>{prop.message}</h4>
-            <p className="deathCount">🥀x{prop.numOfKills}</p>
+            <h4>{message}</h4>
+            <p className="deathCount">🥀x{numOfKills}</p>
         </li>
     )
 }
