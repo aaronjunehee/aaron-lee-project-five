@@ -80,7 +80,7 @@ class Form extends Component {
     moveToCommentSection = () => {
         scroller.scrollTo('comments', {
             duration: 1000,
-            delay: 100,
+            delay: 0,
             smooth: "easeInOutQuint",
         });
     }
