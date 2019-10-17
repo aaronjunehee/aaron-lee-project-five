@@ -94,7 +94,7 @@ class GifFinder extends Component {
         // 1) update the state of selectedGifUrl each time a new gif is clicked on
         // 2) send gifUrl information up to Form component through props callback function
     onSelectedGifChange = (gifUrl) => {
-        this.props.getGifUrlFromComponent(gifUrl);
+        this.props.getGifUrlToParentComponent(gifUrl);
         this.setState({
             selectedGifUrl: gifUrl
         })

@@ -14,6 +14,7 @@ import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } f
     // - Gif Modal:
         // - Button click will toggle Gif Modal on/off
 
+
 class Form extends Component {
     constructor(){
         super();
@@ -27,7 +28,8 @@ class Form extends Component {
         this.gifElement = React.createRef();
     }
 
-    // When user clicks on "Gif" button, state of 'inputLinkClicked' is turned to NOT-false and Gif Modal is rendered to page
+    // (1) When user clicks on "Gif" button, state of 'inputLinkClicked' is turned to NOT-false and Gif Modal is rendered to page
+    // (2) When user clicks on 'close' icon in GifFinder, the props that carries a reference to toggleGifModal is called, which ultimately toggles the state of inputLinkClicked
     toggleGifModal = (event) => {
         event.preventDefault();
         this.setState({
@@ -37,7 +39,7 @@ class Form extends Component {
     }
 
     // Receiving user Gif selection from GifFinder Component and storing in state
-    getGifUrlFromComponent = (gifUrl) => {
+    getGifUrlFromChildComponent = (gifUrl) => {
         this.setState({
             selectedGif: gifUrl
         })
@@ -112,10 +114,9 @@ class Form extends Component {
                             // conditional boolean (truthy) expression using '&& operator' to toggle modal on/off
                 	            this.state.inputLinkClicked && 
                 
-                	            <GifFinder 
-                	            toggle={this.toggleGifModal}
-                	            getGifUrlFromComponent={this.getGifUrlFromComponent} 
-                	            ref={this.gifElement} />
+                            <GifFinder getGifUrlToParentComponent={this.getGifUrlFromChildComponent} 
+                                toggle={this.toggleGifModal}
+                                ref={this.gifElement} />
                 	        }        
 
                         <button onClick={this.killCount} className="killCount">

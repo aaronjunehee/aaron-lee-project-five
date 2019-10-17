@@ -18,13 +18,13 @@ class Header extends Component {
     render(){
         return (
             <header>
-                <div className="wrapper">
+                <div className="wrapper scale-in-center">
                     <div className="headerFlexContainer">
                         <div className="titleContainer">
                             <h2>A safe space for<span className="lineBreak">indoor plant</span></h2>
-                            <h3>serial killers...</h3>
+                            <h3 className="flicker-in-1">serial killers...</h3>
                             <button
-                                className='mainButton'
+                                className='mainButton jello-horizontal'
                                 onClick={this.moveToSection}>Make a Confession
                             </button>
                         </div>
