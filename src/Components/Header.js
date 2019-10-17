@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import cactus from '../images/cactus.png';
+import cactus from '../images/cactus.jpg';
 
 
 
