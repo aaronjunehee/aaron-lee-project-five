@@ -464,8 +464,8 @@ header .headerFlexContainer .cactusImageContainer {
 .jello-horizontal {
   -webkit-animation: jello-horizontal 1.3s both;
   animation: jello-horizontal 1.3s both;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 /* ----------------------------------------------
